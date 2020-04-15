@@ -119,4 +119,32 @@
     line-height: 24px
     letter-spacing: 0.8px
 
-      
+@media screen and ( max-width: 1100px )
+  .footer__links 
+    display: none
+@media screen and ( max-width: 768px )
+  .footer__wrapper
+    flex-direction: column
+    position: relative
+  .footer__left-part
+    margin-bottom: 36px
+  .footer-top-btn
+    position: absolute
+    top: 77px
+    right: 0
+  .footer__copyrights
+    flex-direction: column
+    &-info  
+      flex-direction: column
+      margin-bottom: 16px
+@media screen and ( max-width: 576px )  
+  .footer
+    &__wrapper
+      padding: 32px 0 0
+    &__adress
+      width: 232px 
+      margin-top: 24px
+    &__contacts-title
+      font-size: 12px
+    &-top-btn
+      top: 39px  
