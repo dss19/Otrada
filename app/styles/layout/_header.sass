@@ -1,11 +1,8 @@
 .header
   &__wrapper
     display: flex
-    align-items: center
-    // justify-content: space-between
-    margin-bottom: 21px
-  // &__logo
-  //   margin-right: 27px  
+    align-items: center    
+    margin-bottom: 21px 
   &__about-link
     color: $brown
     +bold
@@ -87,11 +84,15 @@
     justify-content: space-between
     padding: 0 29px 0 61px    
   &__item
-    display: flex  
+    display: flex
+    align-items: center
+    cursor: pointer  
   &__item-img
     margin-right: 10px
     width: 18px
     height: 18px
+  &__item-svg
+    margin-left: 5px  
   &__item-link
     color: $white
     +bold
@@ -99,3 +100,4 @@
     font-size: 14px
     line-height: 21px
     letter-spacing: 0.8px 
+    

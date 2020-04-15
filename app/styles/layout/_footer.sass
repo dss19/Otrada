@@ -1,0 +1,122 @@
+.footer
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    border-top: 2px solid $brown
+    padding: 62px 0 0px
+  &__left-part
+    display: flex
+    flex-direction: column
+  &__adress
+    width: 300px
+    margin-top: 40px
+    +bold 
+    color: $brown
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.8px
+  &__direction-link
+    margin-top: 7px
+    +bold 
+    color: $orange
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.8px
+    text-decoration: underline
+  &__right-part
+    display: flex
+  &__links
+    margin-right: 77px
+    list-style: none
+    li 
+      margin-bottom: 15px
+      &:nth-child(4)
+        margin-bottom: 30px        
+  &__link 
+    +bold 
+    color: $brown
+    font-size: 14px
+    line-height: 21px
+    letter-spacing: 0.8px
+    text-transform: uppercase
+  &__contacts
+    display: flex
+    flex-direction: column
+    margin-right: 69px
+    &-title
+      +norm
+      text-transform: uppercase
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 2px
+      color: rgba(37, 37, 37, 0.873613)
+      margin-bottom: 16px
+    &-phone
+      +bold 
+      color: $brown 
+      font-size: 24px
+      line-height: 24px
+      margin-bottom: 11px
+    &-email
+      +bold 
+      color: $brown 
+      font-size: 24px
+      line-height: 24px
+      margin-bottom: 34px
+    &-btn 
+      +norm
+      color: $brown
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.8px
+      padding: 10px 37px 7px 45px
+      border: 2px solid $grey
+  &-top-btn
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    width: 42px
+    height: 176px
+    background-color: $brown
+    padding: 17px 0
+    
+    &__elem
+      width: 18px
+      height: 4px
+      background: $white
+    &__text
+      +bold 
+      color: $white
+      font-size: 14px
+      letter-spacing: 1px
+      text-transform: uppercase
+      writing-mode: tb-rl
+      transform: rotate(180deg)
+      padding-right: 2px  
+    &__arrow
+      width: 2px
+      height: 40px
+      background: $white
+  &__copyrights
+    margin-top: 28px
+    display: flex
+    justify-content: space-between
+    &-info
+      display: flex
+    &-text, &-link
+      +norm 
+      color: #C2BCBC
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.8px
+    &-text
+      margin-right: 41px
+  &__webmaster
+    +norm 
+    color: #C2BCBC
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.8px
+
+      
