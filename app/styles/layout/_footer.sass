@@ -71,33 +71,20 @@
       letter-spacing: 0.8px
       padding: 10px 37px 7px 45px
       border: 2px solid $grey
+      transition: 0.3s
   &-top-btn
-    display: flex
-    flex-direction: column
+    display: flex    
     align-items: center
-    justify-content: space-between
+    justify-content: center 
     width: 42px
     height: 176px
     background-color: $brown
+    border: 2px solid $brown
     padding: 17px 0
-    
-    &__elem
-      width: 18px
-      height: 4px
-      background: $white
-    &__text
-      +bold 
-      color: $white
-      font-size: 14px
-      letter-spacing: 1px
-      text-transform: uppercase
-      writing-mode: tb-rl
-      transform: rotate(180deg)
-      padding-right: 2px  
-    &__arrow
-      width: 2px
-      height: 40px
-      background: $white
+    transition: 0.3s
+    svg 
+      path 
+        fill: $white   
   &__copyrights
     margin-top: 28px
     display: flex
