@@ -7,7 +7,8 @@ body
   padding: 18px 0 50px
 img 
   display: block 
-ul, li
+  width: 100%
+ul, li, p
   margin: 0
   padding: 0       
 
@@ -29,7 +30,7 @@ ul, li
 @media screen and ( max-width: 1199px )
   .container
     max-width: 992px
-@media screen and ( max-width: 1024px )
+@media screen and ( max-width: 1023px )
   .container
     max-width: none
     padding: 0 8px         
@@ -37,8 +38,19 @@ ul, li
   body 
     padding: 18px 0 25px
   .container
-    padding: 0 8px
+    padding: 0 16px
+  .logo 
+    width: 370px  
+@media screen and ( max-width: 768px )
+  body
+    padding: 26px 0 25px      
+  .logo
+    width: 276px          
 @media screen and ( max-width: 576px )
+  body 
+    padding: 7px 0 25px
+  .container
+    padding: 0 8px   
   .logo
     width: 203px          
       

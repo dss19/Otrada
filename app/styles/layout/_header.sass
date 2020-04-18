@@ -56,11 +56,14 @@
     color: #3165A2
   &__youtube
     color: rgba(205, 45, 45, 0.873613)
+  &-mobile-btn
+    display: none  
 .menu
-  height: 56px
   display: flex
   &__search-button
     width: 60px
+    height: 56px
+    padding: 0 22px
     display: flex
     justify-content: center
     align-items: center
@@ -92,12 +95,14 @@
     width: 100%
     max-width: 1103px
   &__list
+    height: 100%
     list-style: none
     width: 100%
     display: flex
     justify-content: space-between
     padding: 0 29px 0 61px    
   &__item
+    height: 100%
     display: flex
     align-items: center
     cursor: pointer  
@@ -107,7 +112,7 @@
     height: 18px
   &__item-svg
     margin-left: 5px  
-  &__item-link
+  &__item-text
     color: $white
     +bold
     text-transform: uppercase
@@ -129,9 +134,119 @@
     &__social-links
       font-size: 12px
       line-height: 12px
-
   .menu
     &__list
-      padding: 0 24px 0 32px     
-      
-    
+      padding: 0 24px 0 32px
+@media screen and ( max-width: 1199px )
+  .header
+    &__wrapper
+      justify-content: space-between
+    &__about-link
+      margin-left: 0
+    &__working-hours
+      margin-left: 0
+    &__button
+      margin-left: 0
+    &__social-links
+      margin-left: 0
+    &__social-link
+      margin-left: 4px
+      &:first-child
+        margin-left: 0
+  .menu
+    &__list
+      padding: 0 16px
+    &__item-img
+      margin-right: 7px  
+    &__item-text
+      font-size: 12px
+@media screen and ( max-width: 992px )
+  .header
+    &__wrapper
+      position: relative
+    &__about-link, &__social-links
+      display: none
+    &__working-hours
+      margin-left: auto
+    &__button
+      margin: 0 77px 0 15px 
+    &-mobile-btn
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+      top: -6px
+      right: 0px
+      width: 60px
+      height: 56px
+      background: #F2F0F0
+      cursor: pointer
+      &__burger
+        position: relative
+        width: 20px
+        height: 2px
+        background: $brown
+        &:before
+          position: absolute
+          content: ''
+          left: 0
+          bottom: 7px
+          width: 20px
+          height: 2px
+          background: $brown
+        &:after
+          position: absolute
+          content: ''
+          left: 0
+          top: 7px
+          width: 20px
+          height: 2px
+          background: $brown
+  .menu
+    &__item
+      padding: 0 30px
+      &-img
+        margin-right: 0
+      &-text, &-svg 
+        display: none
+@media screen and ( max-width: 768px )
+  .header
+    &__wrapper
+      margin: 0 0 23px
+    &__days, &__button
+      display: none
+    &__working-hours
+      margin-right: 77px
+    &-mobile-btn
+      top: -14px
+  .menu
+    &__item
+      padding: 0 15px 
+@media screen and ( max-width: 576px )
+  .header
+    &__wrapper
+      margin-bottom: 9px
+    &__working-hours
+      margin-right: 0
+    &__time
+      padding-top: 6px  
+    &-mobile-btn
+      width: 56px
+      top: 33px 
+  .menu
+    flex-wrap: wrap
+    &__search-button
+      width: 56px
+      margin-right: 8px
+    &__park-plan
+      width: calc(100% - 128px)
+      justify-content: center
+      padding: 0
+      margin: 0
+    &__navigation
+      margin-top: 8px
+      height: 56px
+    &__list
+      padding: 0 8px    
+
+        
