@@ -1,6 +1,6 @@
 .main
   width: 100%  
-  margin: 16px 0 32px  
+  margin: 16px 0 78px  
   display: grid
   grid-template-columns: repeat(4, 1fr)
   grid-template-rows: repeat(4, auto)
@@ -80,14 +80,23 @@
       +bold 
       color: $brown
       font-size: 22px
-      line-height: 140%
-                                  
+      line-height: 140%                                  
     &-period
       +bold 
       font-size: 18px
       line-height: 27px
       color: #9E9797
-      margin-top: auto                    
+      margin-top: auto
+
+  &__brands-slider    
+    padding: 0 146px
+    margin-bottom: 80px
+    &-slide
+      img 
+        width: auto
+
+      
+
 .slider-box
   width: 100%
   height: 100%    
@@ -96,7 +105,21 @@
 .kino 
   margin-top: 5px    
 .sale-slider
-  display: none        
+  display: none
+@media screen and ( max-width: 1440px )
+  .main__brands-slider
+    padding: 0 66px
+
+      
+@media screen and ( max-width: 1199px )
+  .main__box-sale-total-title
+    font-size: 20px 
+@media screen and ( max-width: 992px )
+  .main__box
+    &-counter, &-sale-total-counter
+      font-size: 48px
+    &-title, &-sale-total-title
+      font-size: 18px                     
 @media screen and ( max-width: 768px )
   .main
     grid-template-columns: repeat(2, 1fr)
