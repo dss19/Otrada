@@ -1,0 +1,190 @@
+.mobile-menu
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background: rgba($white, 0.9)
+  overflow: auto
+  z-index: 5
+  &__inner 
+    position: relative
+    box-shadow: 0px 9px 46px rgba(39, 49, 141, 0.16), 0px 3px 10px rgba(12, 23, 66, 0.16)
+    border-radius: 4px
+    background: $white
+  &__wrapper
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: auto 56px auto
+    grid-gap: 16px
+    background: $white
+    padding: 25px 0 41px        
+  &__logo-wrapper
+    grid-column: span 2
+  &__close
+    position: absolute
+    top: 10px
+    right: 16px
+    width: 60px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    &-button 
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 40px
+      height: 40px
+      background: $grey5
+      border-radius: 50%  
+  &__search-row     
+    display: flex
+  &__park-plan
+    position: relative
+    width: 100%
+    height: 56px
+    margin-right: 0
+    justify-content: center
+  &__search-input
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $brown
+    padding: 0 15px
+    +norm
+    color: $white
+    text-transform: uppercase
+    font-size: 14px
+    line-height: 21px
+    letter-spacing: 0.8px
+    &::placeholder
+      +norm
+      color: $white
+      text-transform: uppercase
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.8px   
+  &__list
+    grid-row: span 2
+    width: 100% 
+    &-part-top    
+      background: $brown      
+      padding: 16px      
+    &-part-bottom
+      background: $white 
+      padding: 16px
+      border: 2px solid rgba(37, 37, 37, 0.873613)
+  &__link
+    display: flex
+    align-items: center
+    width: 100%
+    color: $brown
+    padding: 8px 0
+    +bold    
+    font-size: 14px
+    line-height: 21px
+    letter-spacing: 0.8px
+    text-transform: uppercase
+    &-img 
+      width: 18px
+      height: 18px
+      margin-right: 10px
+      path 
+        fill: $grey5
+    &-text      
+      color: $grey5
+  &__contacts
+    display: flex
+    flex-direction: column 
+  &__adress
+    display: block
+    width: 200px
+    margin-top: 9px
+    +bold 
+    color: $brown 
+    font-size: 16px
+    line-height: 22px 
+  &__working-hours 
+    +norm
+    color: $grey
+    font-size: 14px
+    line-height: 14px
+    margin-top: 8px
+  &__direction
+    +bold 
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.8px
+    color: $orange 
+    text-decoration: underline
+    margin-top: 17px
+  &__phone
+    +bold 
+    color: $brown
+    font-size: 24px
+    line-height: 24px
+    margin-top: 38px          
+  &__email
+    +bold 
+    color: $brown
+    font-size: 24px
+    line-height: 24px
+    margin-top: 8px
+  &__callback
+    +norm
+    color: $brown 
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.8px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 208px
+    height: 44px
+    border: 2px solid $grey
+    margin-top: 24px
+@media screen and ( max-width: 576px )
+  .mobile-menu
+    &__inner
+      width: calc( 100% - 68px )
+    &__wrapper
+      grid-template-columns: 1fr
+      grid-template-rows: auto 56px auto auto
+      grid-gap: 8px
+      padding: 7px 0 24px
+    &__close 
+      right: -60px
+      top: 37px
+      &-button
+        background: $brown
+        svg 
+          path
+            fill: $white
+    &__logo-wrapper
+      grid-column: span 1
+    &__search-input    
+      padding: 0 0 0 10px    
+      font-size: 12px
+      line-height: 12px    
+      &::placeholder
+        font-size: 12px
+        line-height: 12px         
+    &__list
+      grid-row: 3 
+    &__adress
+      width: 210px
+      margin-top: 8px
+      font-size: 12px
+      line-height: 12px
+    &__direction
+      margin-top: 5px
+    &__phone, &__email
+      display: none
+    &__callback
+      margin-top: 10px                
+    
+                  
+                       
