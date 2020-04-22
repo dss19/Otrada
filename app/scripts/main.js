@@ -1,7 +1,18 @@
 $(document).ready(function() {
 
-  // Main slider
+  // Панель поиска
+  $('.menu__search-button').click(() => {
+    $('.menu__search-panel').toggleClass('menu__search-panel_active');
+    $('.menu__search-button').toggleClass('menu__search-button_active');
+    $('.menu__search-input').val('');
+  });
+  $('.menu__search-panel-close').click(() => {
+    $('.menu__search-panel').removeClass('menu__search-panel_active');
+    $('.menu__search-button').toggleClass('menu__search-button_active');
+    $('.menu__search-input').val('');
+  });
 
+  // Main slider
   $('.news-slider').slick({
     autoplay: false,
     dots: true,
@@ -24,8 +35,7 @@ $(document).ready(function() {
     ]
   })
 
-  // Brands slider 
-
+  // Brands slider
   $('.brands-slider').slick({
     autoplay: false,
     dots: true,

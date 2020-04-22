@@ -1,15 +1,78 @@
 .menu
   display: flex
+  position: relative
+  &__search-panel
+    position: absolute
+    top: 0
+    left: 0
+    width: calc(100% - 133px)
+    height: 56px
+    margin-left: 63px
+    opacity: 0
+    display: none
+    visibility: hidden    
+    // animation: 0.4s searchFadeOut forwards       
+    &_active      
+      display: flex      
+      visibility: visible
+      animation: 0.4s searchFadeIn forwards
+    form 
+      position: relative
+      display: flex
+      width: 100%
+      height: 100%
+  &__search-input
+    width: 100%
+    background: $brown
+    +norm
+    color: $white
+    text-transform: uppercase
+    font-size: 14px
+    line-height: 21px
+    letter-spacing: 0.8px
+    padding-left: 27px
+    &::placeholder
+      +norm
+      color: $white
+      text-transform: uppercase
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.8px
+  &__search-reset
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    background: $brown
+    +norm
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: 0.8px
+    color: rgba(218, 200, 200, 0.873613)
+    padding-right: 11px    
+  &__search-panel-close
+    position: absolute
+    top: 0
+    left: 100%
+    height: 100%
+    width: 70px
+    background: $white
+    display: flex
+    align-items: center
+    justify-content: center    
+    cursor: pointer  
   &__search-button
+    margin-right: 3px
+    cursor: pointer    
     width: 60px
     height: 56px
     padding: 0 21px
     display: flex
     justify-content: center
     align-items: center
-    background-color: $orange
-    margin-right: 3px
-    cursor: pointer
+    background-color: $orange    
+    &_active
+      animation: 0.4s searchBtn forwards            
     img 
       width: 18px
       height: 18px
@@ -17,7 +80,7 @@
     display: flex
     align-items: center
     background-color: $orange
-    padding: 0 42px 0 33px
+    padding: 0 0 0 33px
     margin-right: 3px
     cursor: pointer
     img 
@@ -62,10 +125,29 @@
     font-size: 14px
     line-height: 21px
     letter-spacing: 0.8px
+@keyframes searchFadeIn 
+  from 
+    opacity: 0
+  to 
+    opacity: 1
+@keyframes searchBtn
+  to
+    background: $brown
+        
+// @keyframes searchFadeOut 
+//   from 
+//     opacity: 1
+//   to 
+//     opacity: 0
+//     display: none
+//     visibility: hidden
+        
 @media screen and ( max-width: 1400px )  
   .menu
     &__list
       padding: 0 24px 0 32px 
+    &__park-plan
+      padding: 0 8px 0 27px  
 @media screen and ( max-width: 1199px )
   .menu
     &__list
@@ -76,6 +158,8 @@
       font-size: 12px
 @media screen and ( max-width: 992px )
   .menu
+    &__park-plan
+      padding: 0 15px 0 27px
     &__item
       padding: 0 30px
       &-img
@@ -89,9 +173,20 @@
 @media screen and ( max-width: 576px )
   .menu
     flex-wrap: wrap
-    &__search-button
+    &__search-button      
+      margin-right: 8px      
       width: 56px
-      margin-right: 8px
+    &__search-panel
+      width: calc(100% - 123px)
+      &-close
+        width: 60px  
+    &__search-input
+      padding-left: 12px
+      &::placeholder
+        font-size: 12px
+        line-height: 17px  
+    &__search-reset
+      display: none  
     &__park-plan
       width: calc(100% - 128px)
       justify-content: center
