@@ -60,7 +60,11 @@
     display: flex
     align-items: center
     justify-content: center    
-    cursor: pointer  
+    cursor: pointer
+    svg 
+      path
+        transition: 0.3s 
+        fill: $grey4  
   &__search-button
     margin-right: 3px
     cursor: pointer    
@@ -83,9 +87,7 @@
     padding: 0 0 0 33px
     margin-right: 3px
     cursor: pointer
-    img 
-      width: 18px
-      height: 18px
+    svg       
       margin-right: 17.5px
     span
       color: $white
@@ -116,8 +118,14 @@
     margin-right: 10px
     width: 18px
     height: 18px
+    path
+      transition: 0.3s 
+      fill: $grey5
+      
   &__item-svg
-    margin-left: 5px  
+    margin-left: 5px
+    path 
+      fill: $grey5  
   &__item-text
     color: $white
     +bold
