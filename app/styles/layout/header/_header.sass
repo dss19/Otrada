@@ -4,10 +4,11 @@
     align-items: center    
     margin-bottom: 21px 
   &__about-link
+    position: relative
     display: flex
     align-items: center
-    margin-left: 78px
-    cursor: pointer
+    margin-left: 78px 
+    cursor: default   
     &-text      
       color: $brown
       +bold
@@ -20,7 +21,33 @@
       transition: 0.3s
       margin-left: 7px 
       path 
-        fill: $brown  
+        fill: $brown
+  &__about-list
+    position: absolute
+    top: -18px
+    left: -17px
+    width: 220px
+    height: 254px
+    border: 2px solid #6A6A6A
+    z-index: 2
+    opacity: 0
+    display: none
+    &-transparent
+      height: 62px
+      background: transparent
+    &-links
+      height: calc(100% - 62px)
+      background: $white
+      padding-left: 31px  
+    &-link
+      display: block
+      +bold 
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.8px
+      text-transform: uppercase
+      color: #111111
+      margin-bottom: 15px        
   &__working-hours
     display: flex
     color: $grey
@@ -69,6 +96,8 @@
   .header
     &__wrapper
       margin-bottom: 13px
+    &__about-list
+      width: 210px  
     &__working-hours
       flex-direction: column
       font-size: 14px
@@ -87,6 +116,17 @@
       justify-content: space-between
     &__about-link
       margin-left: 0
+    &__about-list
+      width: 180px
+      top: -10px
+      left: -10px      
+      &-transparent
+        height: 46px
+      &-links 
+        height: calc( 100% - 46px )
+        padding-left: 22px
+      &-link
+        font-size: 12px  
     &__working-hours
       margin-left: 0
     &__button
