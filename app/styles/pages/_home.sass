@@ -139,9 +139,90 @@
         background: $grey3
 
 // Слайдер кинотеатра
-.cinema-slider  
-  margin-top: 5px  
-
+.cinema-slider
+  position: relative    
+  &__slide
+    &-content
+      width: 100%
+      height: 100%
+      background: url('../images/cinema-slider/kino-bg.jpg') no-repeat
+      background-size: cover    
+      display: flex
+    &-img
+      width: 288px
+      margin: 24px 38px 29px 32px
+    &-info
+      padding: 24px 0
+    &-header
+      +norm
+      font-size: 16px
+      letter-spacing: 2px
+      color: rgba($white, 0.87)
+      text-transform: uppercase
+    &-logo
+      width: 216px
+      transform: translateY(-16px)
+    &-movie
+      +bold 
+      font-size: 22px
+      line-height: 140%
+      color: rgba($white, 0.87)
+      width: 220px
+      margin-top: 110px 
+    &-all-movies
+      display: block
+      +bold 
+      font-size: 18px
+      line-height: 27px
+      color: $pink1
+      margin-top: 17px   
+    &-reserve
+      display: flex
+      align-items: center
+      +bold 
+      font-size: 18px
+      line-height: 27px
+      color: $pink1
+      margin-top: 4px
+      img 
+        width: 24px
+  &-prev
+    display: none
+  &-next 
+    position: absolute
+    bottom: 32px
+    left: 426px
+    width: 28px
+    height: 28px
+    cursor: pointer
+  .slick-dots
+    position: absolute
+    bottom: 42px
+    left: 358px    
+    list-style: none
+    display: flex         
+    li 
+      width: 8px
+      height: 8px
+      border: none
+      border-radius: 50%
+      margin-right: 8px
+      &:last-child
+        margin-right: 0
+      button
+        padding: 0 
+        width: 8px
+        height: 8px
+        border: none
+        outline: none
+        border-radius: 50%
+        color: transparent
+        background: rgba($white, 0.8)
+        cursor: pointer
+    li.slick-active
+      button
+        background: $pink1
+        
 // Слайдер скидок на мобилке
 .sale-slider.slick-slider
   display: none  
@@ -285,11 +366,42 @@
     &-next
       right: 0
     &-prev
-      left: 0       
+      left: 0
+  .cinema-slider
+    &__slide
+      &-img
+        width: 232px
+        margin: 24px 38px 31px 32px
+      &-logo 
+        width: 200px
+      &-movie
+        margin-top: 40px
+    &-next 
+      bottom: 36px
+      left: 372px
+    .slick-dots
+      bottom: 46px
+      left: 304px                   
 
 @media screen and ( max-width: 1199px )
   .main__box-sale-total-title
     font-size: 20px
+  .cinema-slider
+    &__slide
+      &-img
+        margin: 29px 38px 36px 32px
+      &-info
+        padding-top: 29px  
+      &-logo 
+        width: 180px
+      &-movie
+        margin-top: 16px
+    &-next 
+      bottom: 36px
+      left: 340px
+    .slick-dots
+      bottom: 46px
+      left: 270px  
 
 @media screen and ( max-width: 1023px )
   .main__box
@@ -303,7 +415,30 @@
     &-text 
       font-size: 2vw
     &-period 
-      font-size: 1.8vw   
+      font-size: 1.8vw
+  .cinema-slider
+    &__slide
+      &-img
+        width: 66.5%
+        margin: 2.5vw 3.1vw
+      &-info
+        padding-top: 2.3vw  
+      &-logo        
+        width: 82%
+      &-movie
+        width: auto
+        font-size: 2vw
+        margin-top: 1.5vw
+      &-all-movies, &-reserve
+        font-size: 1.6vw
+        line-height: 110%
+    .slick-dots
+      left: 56.3%
+      bottom: 12% 
+    &-next 
+      left: 73%
+      bottom: 9.2%     
+
                    
 @media screen and ( max-width: 768px )
   .main
@@ -379,12 +514,4 @@
     &__text 
       font-size: 6vw
     &__period 
-      font-size: 4.5vw  
-      
-    
-
-  
-    
-
-
-
+      font-size: 4.5vw
