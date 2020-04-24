@@ -140,19 +140,22 @@
 
 // Слайдер кинотеатра
 .cinema-slider
-  position: relative    
+  position: relative
+  margin-top: 5px      
   &__slide
     &-content
       width: 100%
       height: 100%
       background: url('../images/cinema-slider/kino-bg.jpg') no-repeat
-      background-size: cover    
-      display: flex
-    &-img
-      width: 288px
-      margin: 24px 38px 29px 32px
+      background-size: cover
+      padding: 24px 32px    
+      display: grid
+      grid-template-columns: 48.7% 1fr
+      grid-column-gap: 38px    
     &-info
-      padding: 24px 0
+      padding-bottom: 50px
+      display: flex
+      flex-direction: column
     &-header
       +norm
       font-size: 16px
@@ -167,8 +170,8 @@
       font-size: 22px
       line-height: 140%
       color: rgba($white, 0.87)
-      width: 220px
-      margin-top: 110px 
+      width: 220px      
+      margin-top: auto 
     &-all-movies
       display: block
       +bold 
@@ -222,7 +225,10 @@
     li.slick-active
       button
         background: $pink1
-        
+
+// Слайдер кино на мобилке
+.cinema-mobile-slider
+  display: none !important    
 // Слайдер скидок на мобилке
 .sale-slider.slick-slider
   display: none  
@@ -369,13 +375,8 @@
       left: 0
   .cinema-slider
     &__slide
-      &-img
-        width: 232px
-        margin: 24px 38px 31px 32px
       &-logo 
-        width: 200px
-      &-movie
-        margin-top: 40px
+        width: 200px      
     &-next 
       bottom: 36px
       left: 372px
@@ -387,15 +388,9 @@
   .main__box-sale-total-title
     font-size: 20px
   .cinema-slider
-    &__slide
-      &-img
-        margin: 29px 38px 36px 32px
-      &-info
-        padding-top: 29px  
+    &__slide   
       &-logo 
-        width: 180px
-      &-movie
-        margin-top: 16px
+        width: 180px    
     &-next 
       bottom: 36px
       left: 340px
@@ -418,27 +413,27 @@
       font-size: 1.8vw
   .cinema-slider
     &__slide
-      &-img
-        width: 66.5%
-        margin: 2.5vw 3.1vw
+      &-content
+        padding: 4.9% 6.5%
+        grid-column-gap: 7.7%      
       &-info
-        padding-top: 2.3vw  
+        padding-bottom: 17.3%
+      &-header
+        font-size: 1.5vw          
       &-logo        
         width: 82%
       &-movie
         width: auto
-        font-size: 2vw
-        margin-top: 1.5vw
+        font-size: 2vw        
       &-all-movies, &-reserve
-        font-size: 1.6vw
+        font-size: 1.5vw
         line-height: 110%
     .slick-dots
-      left: 56.3%
-      bottom: 12% 
+      left: 55.8%
+      bottom: 11% 
     &-next 
-      left: 73%
-      bottom: 9.2%     
-
+      left: 70%
+      bottom: 8.4%     
                    
 @media screen and ( max-width: 768px )
   .main
@@ -457,25 +452,39 @@
       &-text 
         font-size: 3.8vw
       &-period 
-        font-size: 2.8vw
-  .news-slider
-    margin-bottom: 24px
-    .slick-dots
-      position: relative
-      width: 100%
-      justify-content: center
-      margin-top: 18px
-      left: 0
-      bottom: 0
-      li 
-        button 
-          background: $grey3
-      li.slick-active
-        button 
-          background: $orange
+        font-size: 2.8vw  
   .cinema-slider
     grid-row: 5
     margin-top: 0
+    &__slide
+      &-content
+        padding: 3.2% 4.6%;
+        grid-column-gap: 6%
+        grid-template-columns: 48.7% 1fr
+      &-info
+        padding-bottom: 16.5%
+      &-header
+        font-size: 2vw   
+      &-logo        
+        width: 85%
+      &-movie
+        width: 85%
+        font-size: 3.5vw        
+      &-all-movies
+        font-size: 2.5vw
+        line-height: 110%
+        margin-top: 10%
+      &-reserve 
+        margin-top: 6px
+        font-size: 2.5vw
+        line-height: 110%
+    .slick-dots
+      left: 54.6%
+      bottom: 7% 
+    &-next 
+      left: 65.5%
+      bottom: 5.2%
+
   .sale-hidden          
     display: none
   .brands-slider.slick-slider
@@ -499,7 +508,123 @@
       &-title, &-sale-total-title
         font-size: 5vw       
   .news-slider
-    margin-bottom: 16px    
+    margin-bottom: 16px
+    .slick-dots
+      position: relative
+      width: 100%
+      justify-content: center
+      margin-top: 13px
+      left: 0
+      bottom: 0
+      li 
+        button 
+          background: $grey3
+      li.slick-active
+        button 
+          background: $orange
+  .cinema-slider
+    &__slide
+      display: none !important
+    .slick-dots
+      display: none !important 
+  .cinema-mobile-slider
+    display: block !important
+    grid-row: 6
+    grid-column: span 2
+    &__slide      
+      &-content
+        width: 100%
+        height: 100% 
+        padding: 7.5% 5%
+        background: url('../images/cinema-slider/kino-bg-mobile.jpg') no-repeat
+        background-size: cover
+        display: grid
+        grid-template-columns: 23.5% 1fr
+        grid-template-rows: repeat(3, auto)
+        grid-column-gap: 5%
+        grid-row-gap: 4%
+      &-header
+        grid-column: span 2
+        +norm
+        font-size: 4vw
+        letter-spacing: 2px
+        color: rgba($white, 0.87)
+        text-transform: uppercase
+        margin-bottom: 1vh
+      &-logo
+        grid-column: span 2
+        width: 59vw
+        margin: 0 auto 5.6vw          
+      &-movie
+        display: flex
+        align-items: center 
+        +bold 
+        font-size: 6vw
+        line-height: 140%
+        color: $white    
+      &-reserve
+        position: relative
+        grid-column: span 2
+        display: flex
+        align-items: center
+        +bold 
+        font-size: 5.7vw
+        color: $pink1
+        margin-top: 5vw
+        img
+          width: 7.5vw
+        span:after
+          position: absolute
+          bottom: 0
+          left: 0
+          content: ''
+          width: 53vw
+          height: 0.6vw
+          background: $pink1 
+
+      &-all-movies
+        position: relative
+        grid-column: span 2        
+        +bold 
+        font-size: 5.7vw
+        color: $pink1
+        &:after 
+          position: absolute
+          bottom: 0
+          left: 0
+          content: ''
+          width: 30vw
+          height: 0.6vw
+          background: $pink1
+    .slick-dots
+      width: 100%
+      display: flex
+      justify-content: center
+      margin-top: 18px
+      list-style: none      
+      li 
+        width: 8px
+        height: 8px
+        border: none
+        border-radius: 50%
+        margin-right: 8px
+        &:last-child
+          margin-right: 0
+        button
+          padding: 0 
+          width: 8px
+          height: 8px
+          border: none
+          outline: none
+          border-radius: 50%
+          color: transparent
+          background: $grey3
+          cursor: pointer
+      li.slick-active
+        button
+          background: $pink1
+    .slick-slide
+      margin-right: 8px         
   .sale-slider.slick-slider    
     display: block
     margin-top: 24px

@@ -38,7 +38,7 @@ $(document).ready(function() {
     '</div>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 576,
         settings: {
           arrows: false
         }
@@ -61,12 +61,21 @@ $(document).ready(function() {
     '</div>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 576,
         settings: {
           arrows: false
         }
       }
     ]
+  });
+
+  // Cinema mobile slider
+  $('.cinema-mobile-slider').slick({
+    autoplay: false,
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1
   });
 
   // Brands slider
@@ -97,7 +106,7 @@ $(document).ready(function() {
         }          
       },
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {          
           slidesToShow: 3,
           slidesToScroll: 3,
