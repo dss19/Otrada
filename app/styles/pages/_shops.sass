@@ -1,0 +1,87 @@
+.shops
+  padding: 36px 0 58px
+  &-content 
+    display: grid
+    grid-template-columns: minmax(auto, 336px) auto
+    grid-template-rows: minmax(auto, 63px) auto
+  &-type
+    grid-row: span 2
+    width: 100%
+    max-width: 336px
+    &__wrap  
+      margin-bottom: 33px
+    &__title
+      +bold
+      color: $black 
+      font-size: 48px
+      line-height: 112%
+    &__filter 
+      list-style: none
+      padding-left: 32px
+      &-item  
+        display: flex
+        align-items: center
+        padding: 6px 0
+        cursor: pointer
+      &-icon
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 19px
+        height: 24px
+        margin-right: 16px  
+      &-name
+        +norm
+        color: $brown
+        font-size: 16px
+        margin-right: 12px
+      &-count 
+        +norm 
+        color: $grey2
+        font-size: 12px
+
+  &-panel
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-bottom: 9px
+    border-bottom: 1px solid rgba($grey3, 0.6)
+    &__search 
+      position: relative
+      width: 264px
+      height: 40px
+      &-input
+        width: 100%
+        height: 100%
+        background: $grey5
+        padding-left: 16px      
+        &::placeholder
+          +norm 
+          font-size: 16px
+          line-height: 24px
+          color: $grey2
+      svg 
+        position: absolute
+        top: 8px
+        right: 12px
+    &__filter
+      display: flex
+      &-wrap
+        display: flex
+        justify-content: center
+        align-items: center  
+        width: 40px
+        height: 40px
+        margin-left: 3px
+        cursor: pointer
+        &:first-child
+          margin-right: 0
+        &-scheme
+          margin-left: 14px
+          cursor: pointer  
+      &-icon 
+        path 
+          fill: $brown
+                      
+               
