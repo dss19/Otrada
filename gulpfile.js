@@ -15,7 +15,7 @@ const plumber = require("gulp-plumber");
  * ------ */
 const options = {
 	html: {
-		src: "app/html/*.html",
+		src: "app/html/**/*.html",
 		dest: "public"
 	},
 	scripts: {

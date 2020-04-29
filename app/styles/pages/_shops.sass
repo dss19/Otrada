@@ -23,6 +23,13 @@
         align-items: center
         padding: 6px 0
         cursor: pointer
+        path 
+          fill: rgba($brown, 0.6)
+        &_active
+          path 
+            fill: $orange
+          .shops-type__filter-name
+            color: $orange    
       &-icon
         display: flex
         justify-content: center
@@ -83,5 +90,47 @@
       &-icon 
         path 
           fill: $brown
-                      
-               
+
+  &-by-logo    
+    display: flex
+    width: 100% 
+    padding-top: 16px
+    justify-content: space-between   
+    &__column 
+      display: flex
+      flex-direction: column       
+    &__item 
+      display: block     
+      margin-bottom: 16px
+      max-width: 236px
+      transition: 0.3s
+      border-radius: 4px
+      img       
+        border-radius: 4px
+
+  &-by-abc
+    width: 100%
+    column-count: 4
+    padding-top: 36px
+    height: auto
+
+    &__group
+      display: inline-block
+      width: 100%
+      max-width: 210px
+      margin-bottom: 18px
+    &__letter
+      +bold 
+      font-size: 12px
+      line-height: 12px
+      color: $orange
+      margin-bottom: 2px
+    &__link
+      display: block
+      +norm
+      font-size: 16px
+      line-height: 24px
+      color: $brown    
+    
+
+                

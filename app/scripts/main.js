@@ -124,5 +124,30 @@ $(document).ready(function() {
     slidesToShow: 1,
     slidesToScroll: 1
   });
+
+  //Страница Магазины
+  $('.shops-type__filter-item').click(function() {
+    $('.shops-type__filter-item').removeClass('shops-type__filter-item_active');
+    $(this).addClass('shops-type__filter-item_active');
+  });
+
+  $.ajax({
+    type: "GET",
+    success: function() {
+      $('.shops-list').load('ajax/shops-by-logo.html')
+    }
+  });
+
+  $('.shops-panel__filter-wrap').click(function() {
+    let path = $(this).attr('data-filter');    
+    $.ajax({
+      type: "GET",
+      success: function() {
+        $('.shops-list').load(`ajax/${path}`)
+      }
+    });
+  })
+
+  
 }); 
 
