@@ -126,13 +126,19 @@ $(document).ready(function() {
   });
 
   //Страница Магазины
-  $('.shops-type__filter-item').click(function() {
+
+  $('.shops-type__filter-item').click(function() {           
     $('.shops-type__filter-item').removeClass('shops-type__filter-item_active');
     $(this).addClass('shops-type__filter-item_active');
+    let type = $(this).clone();
+    $('.shops-choisen')
+      .html(type)
+      .addClass('shops-choisen_active');
   });
 
   $.ajax({
     type: "GET",
+    cache: true,
     success: function() {
       $('.shops-list').load('ajax/shops-by-logo.html')
     }
@@ -142,11 +148,16 @@ $(document).ready(function() {
     let path = $(this).attr('data-filter');    
     $.ajax({
       type: "GET",
+      cache: true,
       success: function() {
         $('.shops-list').load(`ajax/${path}`)
       }
     });
-  })
+    $('.shops-panel__filter-wrap').removeClass('shops-panel__filter-wrap_active');
+    $(this).addClass('shops-panel__filter-wrap_active');
+  });
+
+
 
   
 }); 
