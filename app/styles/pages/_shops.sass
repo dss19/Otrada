@@ -160,13 +160,6 @@
       padding-left: 24px
       cursor: pointer
       box-shadow: 0px 9px 46px rgba(39, 49, 141, 0.04), 0px 3px 10px rgba(12, 23, 66, 0.04)      
-      &:hover
-        .shops-type
-          &__filter
-            transform: scaleY(1)
-            transform-origin: center 72px
-          &__icon
-            transform: rotate(180deg)                        
       &__title        
         font-size: 32px
         line-height: 120%
@@ -178,7 +171,9 @@
         top: calc( 50% - 11px )
         right: 25px
         transition: 0.3s
-        z-index: 2 
+        z-index: 2
+        &_active
+          transform: rotate(180deg) 
       &__filter
         position: absolute
         top: 0
@@ -193,6 +188,9 @@
         transform-origin: center 72px 
         transition: 0.3s
         z-index: 1
+        &_active
+          transform: scaleY(1)
+          transform-origin: center 72px
         &-item
           background: $white
           padding-left: 23px          
@@ -236,8 +234,9 @@
       max-width: none
       height: 86px
       padding-left: 16px
-      &:hover
-        .shops-type__filter
+      &__filter
+        transform-origin: center 86px
+        &_active
           transform-origin: center 86px
       &__icon
         right: 16px

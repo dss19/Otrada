@@ -126,6 +126,10 @@ $(document).ready(function() {
   });
 
   //Страница Магазины
+  $('.shops-type').click(function() {
+    $('.shops-type__filter').toggleClass('shops-type__filter_active');
+    $('.shops-type__icon').toggleClass('shops-type__icon_active');
+  });    
 
   $('.shops-type__filter-item').click(function() {           
     $('.shops-type__filter-item').removeClass('shops-type__filter-item_active');
@@ -134,6 +138,7 @@ $(document).ready(function() {
     $('.shops-choisen')
       .html(type)
       .addClass('shops-choisen_active');
+    $('.shops-type__filter').toggleClass('shops-type__filter_active', true);  
   });
 
   $.ajax({
