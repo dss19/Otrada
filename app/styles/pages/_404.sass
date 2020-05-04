@@ -1,0 +1,95 @@
+.not-found
+  margin: 32px 0 48px
+  overflow: hidden
+  &__content
+    position: relative
+    background: $brown
+    height: 400px
+  &__bg 
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &-numbers
+      margin: 61px 53px 0 auto
+      display: block
+  &__info
+    padding: 23px 32px
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &-logo
+      +norm
+      color: $grey5
+      font-size: 12px
+      line-height: 18px
+      letter-spacing: 1px
+      margin-bottom: 10px
+    &-title
+      +bold 
+      color: $grey6 
+      font-size: 48px
+      line-height: 112%
+      margin-bottom: 28px
+      letter-spacing: 2px
+    &-subtitle
+      +norm 
+      color: $grey6
+      font-size: 18px
+      line-height: 24px 
+      margin-bottom: 30px
+    &-goto-main
+      display: flex
+      align-items: center
+      max-width: 160px
+      &-icon
+        margin-right: 7px
+      &-text
+        position: relative
+        +bold 
+        font-size: 20px
+        line-height: 120%
+        color: $orange
+        &::after 
+          position: absolute
+          content: ''
+          left: 0
+          bottom: 0
+          width: 100%
+          height: 2px
+          background: $orange
+
+@media screen and ( max-width: 1400px )
+  .not-found
+    margin-top: 24px
+@media screen and ( max-width: 992px )
+  .not-found
+    margin-top: 16px
+    &__bg-numbers
+      margin-right: 0
+      transform: translateX(48px)
+@media screen and ( max-width: 680px )
+  .not-found
+    &__bg
+      background: $black 
+      &-numbers
+        display: none
+    &__info
+      padding: 16px 
+      &-title
+        font-size: 32px
+        line-height: 120%
+        margin-bottom: 16px
+      &-subtitle
+        margin-bottom: 18px     
+@media screen and ( max-width: 576px )
+  .not-found
+    margin-top: 8px        
+            
+
+
+
+   
