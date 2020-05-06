@@ -162,6 +162,24 @@ $(document).ready(function() {
     $(this).addClass('shops-panel__filter-wrap_active');
   });
 
+  // Страница одного магазина (Brand)
+  
+  let text = $('.brand__info-description-text'),
+      spoiler = $('.brand__info-description-spoiler'),
+      inner = text.prop('scrollHeight'),
+      outer = text.prop('clientHeight'),
+      diff = inner - outer;      
+  diff > 5 ? 
+    spoiler.addClass('brand__info-description-spoiler_visible') : 
+    spoiler.removeClass('brand__info-description-spoiler_visible');     
+     
+  spoiler.click(function() {    
+    text.toggleClass('brand__info-description-text_full');        
+    text.hasClass('brand__info-description-text_full') ? 
+      spoiler.html('Свернуть...') : 
+      spoiler.html('Читать полностью...');    
+  });
+
 
 
   
