@@ -1,0 +1,105 @@
+.cinema 
+  margin: 32px 0 73px
+  &-content
+    grid-template-rows: minmax(152px, auto) auto auto
+  &__header
+    position: relative
+    &-info
+      justify-content: flex-start
+    &-title
+      margin-bottom: 8px  
+    &-scheme
+      position: absolute
+      top: 16px
+      right: 16px
+      margin-left: 0
+  &__poster
+    grid-row: span 2
+  &__info
+    &-reserve
+      display: flex
+      margin-top: 24px
+      svg 
+        margin-right: 14px
+      &-text 
+        +bold 
+        font-size: 20px
+        line-height: 29px
+        color: $pink1
+        text-decoration: underline  
+    &-description-text.brand__info-description-text
+      max-height: 210px      
+    &-description-text.brand__info-description-text_full
+      max-height: none
+  &-carousel
+    grid-column: span 2
+    width: 100%
+    margin-top: 64px
+    &__title
+      +bold
+      font-size: 32px
+      line-height: 24px
+      color: $black
+      margin-bottom: 30px
+  &-movies
+    position: relative
+    &-next
+      position: absolute
+      outline: none
+      top: -53px
+      right: 0
+      width: 28px
+      height: 28px
+      cursor: pointer      
+    &-prev
+      position: absolute
+      outline: none
+      top: -53px
+      right: 36px
+      width: 28px
+      height: 28px
+      cursor: pointer      
+    &__slide
+      max-width: 208px      
+      img
+        width: auto
+      &-name
+        display: inline-block
+        +bold 
+        font-size: 22px
+        line-height: 120%
+        color: $brown
+        margin-top: 16px
+.buttons
+  position: absolute
+  top: -25px
+  width: 100px
+  height: 30px
+  background: red            
+
+@media screen and ( max-width: 1200px )
+  .cinema
+    margin: 24px 0 64px
+@media screen and ( max-width: 1023px )
+  .cinema
+    margin-top: 16px 
+@media screen and ( max-width: 900px )
+  .cinema
+    &-content
+      display: block
+    &__poster
+      display: none
+    &__info  
+    &-carousel
+      grid-column: span 1
+      grid-row: 3
+      width: 100%           
+    
+     
+
+              
+
+
+
+
+    
