@@ -214,57 +214,18 @@ $(document).ready(function() {
     }    
   })
 
-  // Страница кино (слайдер)
-  // $('.cinema-movies').slick({
-  //   autoplay: false,
-  //   infinite: false,
-  //   dots: false,
-  //   arrows: true,
-  //   slidesToShow: 6,
-  //   slidesToScroll: 6,
-  //   prevArrow: '<div class="cinema-movies-prev">'+
-  //   '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">'+
-  //   '<path fill-rule="evenodd" clip-rule="evenodd" d="M16.586 20.2423C16.1955 20.6328 15.5623 20.6328 15.1718 20.2423L9.51495 14.5854C9.12442 14.1949 9.12442 13.5617 9.51495 13.1712L15.1718 7.51434C15.5623 7.12382 16.1955 7.12382 16.586 7.51434C16.9765 7.90487 16.9765 8.53803 16.586 8.92856L11.6363 13.8783L16.586 18.8281C16.9765 19.2186 16.9765 19.8517 16.586 20.2423Z" fill="#C2BCBC"/>'+
-  //   '<circle r="13" transform="matrix(-1 0 0 1 14 14)" stroke="#C2BCBC" stroke-width="2"/>'+
-  //   '</svg>'+
-  //   '</div>',
-  //   nextArrow: '<div class="cinema-movies-next">'+
-  //   '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">'+
-  //   '<path fill-rule="evenodd" clip-rule="evenodd" d="M12.414 7.75774C12.8045 7.36721 13.4377 7.36721 13.8282 7.75774L19.4851 13.4146C19.8756 13.8051 19.8756 14.4383 19.4851 14.8288L13.8282 20.4857C13.4377 20.8762 12.8045 20.8762 12.414 20.4857C12.0235 20.0951 12.0235 19.462 12.414 19.0714L17.3637 14.1217L12.414 9.17195C12.0235 8.78143 12.0235 8.14826 12.414 7.75774Z" fill="#C2BCBC"/>'+
-  //   '<circle cx="14" cy="14" r="13" stroke="#C2BCBC" stroke-width="2"/>'+
-  //   '</svg>'+
-  //   '</div>',
-  //   responsive: [
-  //     {
-  //       breakpoint: 1400,
-  //       settings: {          
-  //         slidesToShow: 5,
-  //         slidesToScroll: 5
-  //       }
-  //     },
-  //     {          
-  //       breakpoint: 1200,
-  //       settings: {          
-  //         slidesToShow: 4,
-  //         slidesToScroll: 4
-  //       }                         
-  //     },
-  //     {          
-  //       breakpoint: 900,
-  //       settings: {          
-  //         slidesToShow: 3,
-  //         slidesToScroll: 3
-  //       }                         
-  //     }
-  //     // {          
-  //     //   breakpoint: 680,
-  //     //   settings: {          
-  //     //     slidesToShow: 2,
-  //     //     slidesToScroll: 2
-  //     //   }                         
-  //     // }      
-  //   ]   
-  // });
+  // Страница схемы парка
+  $('.scheme-header__title').click(function() {
+    $(this).toggleClass('scheme-header__title_active');
+    $('.scheme-header__menu').toggleClass('scheme-header__menu_active');
+  });
+
+  $('.scheme-header__menu-item-wrapper').click(function() {
+    let list = $(this).siblings('.scheme-header__menu-item-filter'),
+        icon = $(this).children('.scheme-header__menu-item-icon');     
+    list.toggleClass('scheme-header__menu-item-filter_active');
+    icon.toggleClass('scheme-header__menu-item-icon_active');
+  });
   
 }); 
-
+ 

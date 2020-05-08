@@ -1,0 +1,93 @@
+
+.scheme
+  margin: 16px 0 0
+  &-header
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 16px 0
+    margin-bottom: 85px
+    &:after 
+      position: absolute
+      content: ''
+      width: 100%
+      height: 24px
+      left: 0
+      top: 100%
+      background: linear-gradient(180deg, rgba(237, 232, 232, 0.8) 0%, rgba(242, 240, 240, 0.47) 15.1%, rgba(255, 255, 255, 0) 89.58%)
+    &__title
+      position: relative
+      +bold
+      color: $black
+      font-size: 48px
+      line-height: 112%
+      padding-right: 40px
+      cursor: pointer
+      &:after
+        position: absolute
+        top: 50%
+        right: 5px
+        content: ''
+        border-style: solid;
+        border-width: 5px 4.5px 0 4.5px
+        border-color: $grey4 transparent transparent transparent
+        transition: 0.3s
+      &_active
+        &:after 
+          transition: 0.3s
+          transform: rotate(180deg)             
+    &__nav
+      position: relative
+    &__menu
+      display: none
+      position: absolute
+      left: 0
+      top: calc(100% + 16px)
+      width: 272px
+      max-height: 65vh
+      overflow: auto
+      box-shadow: 0px 9px 46px rgba(39, 49, 141, 0.04), 0px 3px 10px rgba(12, 23, 66, 0.04)
+      border-radius: 4px        
+      &_active
+        display: block
+      &-item
+        background: $white
+        border-bottom: 1px solid rgba($grey3, 0.6)
+        &:last-of-type
+          border-radius: 0 0 4px 4px
+          border: none
+        &:first-of-type
+          border-radius: 4px 4px 0 0
+        &-wrapper
+          position: relative
+          padding: 16px 20px 16px 32px
+          display: flex
+          align-items: center
+          justify-content: space-between          
+          cursor: pointer
+        &-title
+          +bold 
+          color: $brown
+          font-size: 22px
+          line-height: 140% 
+        &-icon          
+          transition: 0.3s
+          &_active
+            transition: 0.3s
+            transform: rotate(180deg)         
+        &-filter
+          display: none
+          &_active
+            display: block
+  &-plan
+    display: flex
+    justify-content: flex-end
+
+// кастомный скролл в меню  
+.scheme-header__menu::-webkit-scrollbar
+  width: 4px
+.scheme-header__menu::-webkit-scrollbar-track
+  background: $grey5
+.scheme-header__menu::-webkit-scrollbar-thumb
+  background: $grey3
