@@ -186,9 +186,32 @@ $(document).ready(function() {
       nextEl: '.cinema-movies-next',
       prevEl: '.cinema-movies-prev'      
     },
-    spaceBetween: 16,
-    slidesPerView: 6,
-    slidesPerGroup: 6
+    spaceBetween: 8,
+    slidesPerView: 'auto',
+    breakpoints: {      
+      576: {
+        slidesPerGroup: 2,
+        spaceBetween: 16
+      },
+      768: {
+        slidesPerGroup: 3
+      },
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 53
+      },
+      1200: {
+        slidesPerView: 5,
+        slidesPerGroup: 5,
+        spaceBetween: 19
+      },
+      1401: {
+        slidesPerView: 6,
+        slidesPerGroup: 6,
+        spaceBetween: 16
+      }
+    }    
   })
 
   // Страница кино (слайдер)

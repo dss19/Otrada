@@ -43,22 +43,26 @@
       margin-bottom: 30px
   &-movies
     position: relative
-    &-next
+    &-next, &-prev
       position: absolute
       outline: none
       top: -53px
-      right: 0
       width: 28px
       height: 28px
-      cursor: pointer      
+      cursor: pointer
+      svg
+        path 
+          fill: $grey4
+        circle
+          stroke: $grey4
+    &-next.swiper-button-disabled, &-prev.swiper-button-disabled
+      svg
+        path, circle
+          opacity: 0.5
+    &-next      
+      right: 0      
     &-prev
-      position: absolute
-      outline: none
-      top: -53px
-      right: 36px
-      width: 28px
-      height: 28px
-      cursor: pointer      
+      right: 36px      
     &__slide
       max-width: 208px      
       img
@@ -70,13 +74,6 @@
         line-height: 120%
         color: $brown
         margin-top: 16px
-.buttons
-  position: absolute
-  top: -25px
-  width: 100px
-  height: 30px
-  background: red            
-
 @media screen and ( max-width: 1200px )
   .cinema
     margin: 24px 0 64px
@@ -86,14 +83,23 @@
 @media screen and ( max-width: 900px )
   .cinema
     &-content
-      display: block
+      display: flex 
+      flex-direction: column
     &__poster
       display: none
-    &__info  
+@media screen and ( max-width: 576px )
+  .cinema
+    &__header
+      &-scheme
+        top: 8px
+        right: 8px
+    &__info
+      order: 1
+    &-carousel__title, &-movies-next, &-movies-prev
+      display: none
     &-carousel
-      grid-column: span 1
-      grid-row: 3
-      width: 100%           
+      margin: 16px 0        
+                
     
      
 
