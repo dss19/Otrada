@@ -7,11 +7,13 @@
     grid-template-rows: minmax(152px, auto) auto
     grid-gap: 16px  
   &__header
+    position: relative
     display: flex
     padding: 16px
     background: $grey5
     &-img 
       width: 120px
+      height: min-content
       margin-right: 24px
     &-info
       display: flex
@@ -39,8 +41,10 @@
       cursor: pointer
       text-decoration: underline
     &-scheme
-      display: flex
-      margin-left: auto
+      position: absolute
+      top: 16px
+      right: 16px
+      display: flex      
       align-items: flex-start
       cursor: pointer 
       &-text 
@@ -215,6 +219,8 @@
         line-height: 120%
         margin-bottom: 4px
       &-scheme
+        top: 8px
+        right: 8px
         &-text 
           display: none 
     &__mobile-img
@@ -234,6 +240,7 @@
       grid-row: 3
       flex-direction: column
       &-contacts
+        width: auto
         padding-left: 0
         margin-bottom: 20px
       &-description
