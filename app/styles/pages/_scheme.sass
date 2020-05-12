@@ -48,7 +48,8 @@
       max-height: 65vh
       overflow: auto
       box-shadow: 0px 9px 46px rgba(39, 49, 141, 0.04), 0px 3px 10px rgba(12, 23, 66, 0.04)
-      border-radius: 4px        
+      border-radius: 4px 
+      z-index: 1       
       &_active
         display: block
       &-item
@@ -91,3 +92,43 @@
   background: $grey5
 .scheme-header__menu::-webkit-scrollbar-thumb
   background: $grey3
+
+@media screen and ( max-width: 1200px )
+  .scheme
+    &-plan
+      position: relative
+      justify-content: center
+      &__buttons
+        position: absolute
+        bottom: 100%
+        right: 0
+        display: flex
+
+      &__button-minus, &__button-plus
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 64px
+        height: 64px
+        border-radius: 50%
+        box-shadow: 0px 9px 46px rgba(39, 49, 141, 0.04), 0px 3px 10px rgba(7, 17, 50, 0.25)
+        span    
+          width: 24px
+          height: 2px
+          background: $grey4
+          &:nth-of-type(2)
+            position: absolute
+            width: 2px
+            height: 24px
+            top: 50%
+            left: 50%
+            transform: translateX(-50%) translateY(-50%)
+      &__button-plus
+        margin-left: 24px
+// @media screen and ( max-width: 576px )
+
+              
+
+
+    
