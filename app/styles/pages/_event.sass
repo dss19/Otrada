@@ -1,0 +1,210 @@
+.event
+  margin: 32px 0 64px
+  &-content
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: minmax(auto, 228px) auto
+    grid-gap: 16px
+
+  &__header
+    padding: 24px 32px
+    display: flex
+    flex-direction: column
+    background: $grey5
+    &-title
+      +norm
+      font-size: 12px
+      line-height: 18px
+      letter-spacing: 1px
+      text-transform: uppercase
+      color: rgba(37, 37, 37, 0.87)
+      margin-bottom: 6px
+    &-name
+      +bold
+      font-size: 48px
+      line-height: 112%
+      color: $black
+      
+    &-filter
+      margin-top: auto
+      display: flex
+      &-button 
+        +bold
+        font-size: 18px
+        line-height: 27px    
+        color: $brown
+        padding: 10px 25px
+        border-radius: 24px
+        cursor: pointer
+        margin-right: 16px
+        background: $white
+        &:last-of-type
+          margin-right: 0
+        span 
+          color: $orange
+        &_active
+          background: $orange
+          color: $white 
+          span 
+            color: $white
+
+  &__images
+    grid-row: span 2
+    display: flex
+    flex-wrap: wrap
+    height: min-content
+    &-block
+      &_big
+        width: 100%
+        margin-bottom: 16px
+      &_small
+        width: calc(50% - 8px)
+        height: 312px
+        img 
+          height: inherit
+        &:last-of-type
+          margin-left: 16px
+
+
+  &__info
+    &-scheme
+      +norm
+      font-size: 10px
+      line-height: 15px
+      letter-spacing: 1px
+      text-transform: uppercase
+      color: rgba(37, 37, 37, 0.6)
+      text-align: right
+      padding-right: 7px
+      margin-bottom: 18px
+    &-item
+      position: relative
+      display: flex
+      width: 100%
+      padding-left: 33px
+      margin-bottom: 30px
+      &:last-of-type
+        margin-bottom: 0
+      &-time-block
+        margin-right: 26px
+      &-time, &-payment 
+        display: flex
+        width: 187px
+        align-items: center
+        svg
+          margin-right: 11px
+      &-time        
+        span
+          +bold
+          font-size: 24px
+          line-height: 140%
+          color: $black
+          padding-top: 4px           
+      &-payment
+        span 
+          +bold 
+          font-size: 16px
+          line-height: 24px
+          color: $grey8
+          padding-top: 4px
+      &-text
+        +norm 
+        font-size: 18px
+        line-height: 24px
+        color: $black
+        margin-right: 80px
+        padding-top: 4px
+        a 
+          +bold 
+          color: $orange 
+      &-scheme
+        position: absolute
+        top: 4px
+        right: 16px
+
+@media screen and ( max-width: 1400px )
+  .event
+    &__images
+      &-block
+        &_small
+          height: 257px  
+
+@media screen and ( max-width: 1200px )
+  .event
+    margin: 24px 0 64px
+    &-content
+      grid-template-columns: 59.4% 1fr
+    &__images
+      &-block
+        &_small
+          width: 100%
+          height: auto
+          margin-bottom: 16px
+          &:last-of-type
+            margin-left: 0
+
+@media screen and ( max-width: 900px )
+  .event
+    &-content
+      grid-template-columns: 1fr
+      grid-template-rows: minmax(auto, 228px) auto auto
+    &__images
+      grid-row: span 1
+      &-block
+        &_big
+          width: 100%
+          margin-bottom: 16px
+        &_small
+          width: calc(50% - 8px)
+          height: 312px
+          img 
+            height: inherit
+          &:last-of-type
+            margin-left: 16px
+    &__info
+      grid-row: 2
+
+@media screen and ( max-width: 768px )
+  .event
+    &__images
+      &-block
+        &_small
+          height: auto
+          img
+            height: max-content
+
+@media screen and ( max-width: 576px )
+  .event
+    margin-top: 8px
+    &-content
+      grid-gap: 8px
+    &__header
+      padding: 24px
+      overflow: hidden
+      &-name
+        font-size: 32px
+        line-height: 120%
+      &-filter
+        width: 480px  
+    &__images
+      grid-row: 2
+      &-block
+        &_small
+          display: none
+    &__info
+      grid-row: 3
+      &-scheme
+        display: none
+      &-item  
+        display: block
+        padding: 0 
+        &-time-block
+          margin-right: 0
+          margin-bottom: 8px 
+        &-text 
+          margin-right: 65px  
+
+
+                               
+
+
