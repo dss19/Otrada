@@ -1,0 +1,118 @@
+.section-slider  
+  position: relative
+  width: 100%
+  max-width: 1104px
+  min-height: 550px
+  margin-left: auto
+  &__wrapper-top
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    max-width: 880px
+  &__wrapper-thumbs
+    position: absolute
+    top: 0
+    right: 0
+    max-width: 184px
+    height: 408px
+  &__prev, &__next
+    position: absolute
+    right: 158px
+    outline: none
+    width: 28px
+    height: 28px    
+    cursor: pointer
+    svg
+        path 
+          fill: $grey4
+        circle
+          stroke: $grey4
+  &__next.swiper-button-disabled, &__prev.swiper-button-disabled
+    svg
+      path, circle
+        opacity: 0.5 
+  &__prev
+    bottom: 0
+  &__next
+    bottom: 44px
+.swiper-pagination-fraction.section-slider__counter
+  position: absolute  
+  bottom: 90px
+  padding-left: 918px
+  +bold 
+  font-size: 24px
+  line-height: 24px
+.swiper-container.section-slider-thumbs
+  height: 100% 
+  overflow: auto  
+  scrollbar-color: $orange $grey5
+  scrollbar-width: thin
+.swiper-container.section-slider-thumbs::-webkit-scrollbar
+  width: 4px
+.swiper-container.section-slider-thumbs::-webkit-scrollbar-track
+  background: $grey5
+.swiper-container.section-slider-thumbs::-webkit-scrollbar-thumb
+  background: $orange 
+.section-slider-thumbs
+  .swiper-slide
+    overflow: hidden
+    cursor: pointer
+    padding-right: 4px
+    opacity: 0.5    
+  .swiper-slide-thumb-active
+    opacity: 1 
+@media screen and ( max-width: 1199px )
+  .section-slider
+    min-height: auto
+    max-width: none
+    margin-left: 0
+    &__wrapper-top
+      position: relative
+      max-width: 770px
+    &__wrapper-thumbs
+      height: 350px  
+  .swiper-pagination-fraction.section-slider__counter
+    padding-left: 808px          
+@media screen and ( max-width: 1023px )
+  .section-slider
+    &__next   
+      right: 16vw
+      bottom: 5vw
+    &__prev
+      right: 16vw      
+    &__wrapper-top
+      max-width: none
+      margin-bottom: 16px      
+    &__wrapper-thumbs 
+      position: relative
+      max-width: 75vw
+      height: auto 
+  .swiper-container.section-slider-thumbs
+    overflow: hidden   
+  .swiper-pagination-fraction.section-slider__counter
+    padding-left: 84vw
+    bottom: 5.3vw
+      
+
+@media screen and ( max-width: 680px )
+  .section-slider
+    &-thumbs, &__prev, &__next 
+      display: none
+    .swiper-pagination-bullets
+      position: absolute
+      bottom: -24px 
+      left: 0
+      width: 100% !important
+      display: flex
+      justify-content: center
+      overflow: hidden
+    .swiper-pagination-bullet
+      margin: 0 4px
+      background: $grey3
+      opacity: 1
+    .swiper-pagination-bullet-active
+      background: $orange  
+
+       
+              

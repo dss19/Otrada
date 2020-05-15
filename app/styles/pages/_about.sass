@@ -1,0 +1,220 @@
+.about  
+  margin: 32px 0 64px
+  &__header
+    display: flex
+    margin-bottom: 40px
+    &-menu
+      width: 224px
+      padding: 14px 0 
+      &-link
+        display: block
+        +bold
+        font-size: 14px
+        line-height: 21px
+        letter-spacing: 0.8px
+        padding: 8px 16px
+        color: $brown
+        text-transform: uppercase
+        &_active
+          color: $orange
+
+    &-cover
+      flex: 1
+      height: 400px
+      padding: 24px 32px
+      background: url(../images/about/about-header.jpg) no-repeat
+      background-size: cover
+      &-title
+        +norm
+        font-size: 12px
+        line-height: 18px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: $grey5
+        margin-bottom: 6px
+      &-name
+        +bold 
+        font-size: 48px
+        line-height: 112%
+        color: $white  
+
+  &__info
+    display: flex
+    &-contacts
+      flex-basis: 40%
+      padding-left: 33px
+      svg
+        margin-right: 14px
+      &-block
+        display: flex
+        align-items: flex-start
+        margin-bottom: 20px
+        &:last-of-type
+          margin-bottom: 0
+        span 
+          display: inline-block
+          max-width: 225px
+          +bold
+          font-size: 16px
+          line-height: 24px
+          color: $grey7          
+        &-time
+          align-items: center
+          span 
+            +bold 
+            font-size: 24px
+            line-height: 24px
+            color: $brown
+            padding-top: 4px
+        &-social
+          align-items: center
+          &-link 
+            display: inline-block
+            text-transform: uppercase
+            +bold
+            font-size: 16px
+            line-height: 24px
+            color: $grey7
+            padding-top: 4px
+            margin-right: 14px
+            &:last-of-type
+              margin-right: 0
+        &-route
+          position: relative
+          +bold
+          font-size: 16px
+          line-height: 24px
+          color: $orange
+          &:after 
+            position: absolute
+            content: ''
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 2px
+            background: $orange
+
+    &-desc
+      flex-basis: 60%
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      height: 590px
+      margin-bottom: 40px
+      &-text 
+        width: 40%
+        +norm
+        font-size: 18px
+        line-height: 24px
+        color: $black
+        &_bold
+          position: relative
+          +bold         
+          margin-bottom: 35px
+          padding-left: 23px
+          &:before
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 4px
+            height: 100%
+            background: $brown
+        &-spoiler
+          display: none     
+
+@media screen and ( max-width: 1400px )
+  .about
+    &__header
+      display: block
+      position: relative
+      width: 100%
+      &-menu
+        position: absolute
+        top: 0
+        right: 0
+        display: flex
+        width: auto
+        padding: 8px 27px 0 0
+        &-link
+          padding: 17px 12px
+          font-size: 12px
+          line-height: 16px
+          color: $white
+          &_active
+            color: $orange
+    &__info
+      &-desc
+        height: 650px
+        &-text 
+          width: 45%
+@media screen and ( max-width: 1200px )
+  .about
+    &__info
+      &-contacts
+        flex-basis: 35%
+      &-desc
+        flex-basis: 65%
+@media screen and ( max-width: 992px )
+  .about
+    margin: 16px 0 48px
+    &__header
+      &-menu
+        display: none
+    &__info
+      &-contacts
+        flex-basis: 50%
+      &-desc 
+        flex-basis: 50%
+        height: auto
+        &-text 
+          width: 80%
+          margin-bottom: 12px
+          &_bold
+            margin-bottom: 35px
+          &-bottom
+            display: none
+            &_active
+              display: block
+          &-spoiler
+            display: block
+            +bold
+            font-size: 16px
+            line-height: 24px
+            color: $orange 
+            padding: 10px 0
+            cursor: pointer 
+@media screen and ( max-width: 768px )
+  .about
+    &__header
+      &-cover
+        height: 240px
+@media screen and ( max-width: 680px )
+  .about
+    &__header
+      &-cover
+        padding: 16px
+        background-position: top center
+        &-name 
+          font-size: 32px
+          line-height: 120%
+    &__info 
+      display: block
+      &-contacts
+        width: 100%
+        margin-bottom: 45px
+        padding-left: 0
+      &-desc
+        width: 100%
+        &-text
+          width: 100%
+          &_bold
+            padding-left: 16px
+          
+
+                  
+            
+    
+            
+    
+

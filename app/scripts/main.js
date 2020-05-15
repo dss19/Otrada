@@ -181,7 +181,7 @@ $(document).ready(function() {
   });
 
   const cinemaSlider = new Swiper ('.swiper-container-cinema', {
-    loop: false,
+    loop: false, 
     navigation: {
       nextEl: '.cinema-movies-next',
       prevEl: '.cinema-movies-prev'      
@@ -213,6 +213,55 @@ $(document).ready(function() {
       }
     }    
   })
+
+  // Слайдер страницы О торговом парке
+
+  const aboutSliderThumbs = new Swiper ('.about-slider-thumbs', {
+    slidesPerView: 4,
+    spaceBetween: 8,
+    loop: false,
+    freeMode: false,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      1024: {
+        direction: 'vertical'
+      }
+    }
+  });
+  
+  const aboutSliderTop = new Swiper ('.about-slider-top', {
+    loop: false,
+    spaceBetween: 8,
+    pagination: {
+      el: '.about-slider__counter',
+      type: 'bullets'
+    },
+    thumbs: {
+      swiper: aboutSliderThumbs
+    }, 
+    breakpoints: {
+      681: {
+        navigation: {
+          nextEl: '.about-slider__next',
+          prevEl: '.about-slider__prev'
+        },        
+        pagination: {          
+          type: 'fraction'
+        }
+      }      
+    }
+  });
+
+  // Спойлер страницы О троговом парке
+  const aboutSpoiler = $('.about__info-desc-text-spoiler'),
+      aboutText = $('.about__info-desc-text-bottom');
+  aboutSpoiler.click(function() {
+    aboutText.toggleClass('about__info-desc-text-bottom_active');
+    aboutText.hasClass('about__info-desc-text-bottom_active') ?
+      aboutSpoiler.html('Свернуть...') :
+      aboutSpoiler.html('Читать полностью...')
+  });
 
   // Страница схемы парка
   $('.scheme-header__title').click(function() {
