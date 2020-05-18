@@ -215,7 +215,6 @@ $(document).ready(function() {
   })
 
   // Слайдер страницы О торговом парке
-
   const aboutSliderThumbs = new Swiper ('.about-slider-thumbs', {
     slidesPerView: 4,
     spaceBetween: 8,
@@ -245,6 +244,44 @@ $(document).ready(function() {
         navigation: {
           nextEl: '.about-slider__next',
           prevEl: '.about-slider__prev'
+        },        
+        pagination: {          
+          type: 'fraction'
+        }
+      }      
+    }
+  });
+
+  // Слайдер страницы Фотоотчет
+  const photoReportSliderThumbs = new Swiper ('.photo-report-slider-thumbs', {
+    slidesPerView: 4,
+    spaceBetween: 8,
+    loop: false,
+    freeMode: false,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      1024: {
+        direction: 'vertical'
+      }
+    }
+  });
+  
+  const photoReportSliderTop = new Swiper ('.photo-report-slider-top', {
+    loop: false,
+    spaceBetween: 8,
+    pagination: {
+      el: '.photo-report-slider__counter',
+      type: 'bullets'
+    },
+    thumbs: {
+      swiper: photoReportSliderThumbs
+    }, 
+    breakpoints: {
+      681: {
+        navigation: {
+          nextEl: '.photo-report-slider__next',
+          prevEl: '.photo-report-slider__prev'
         },        
         pagination: {          
           type: 'fraction'

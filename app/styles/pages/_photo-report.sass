@@ -1,0 +1,195 @@
+.photo-report
+  margin: 32px 0 64px
+  &__header
+    display: flex
+    &-info
+      display: flex
+      width: 100%
+      max-width: 1104px
+      max-height: 182px
+      background: $grey5
+      padding: 16px
+      margin-bottom: 26px
+    &-date  
+      width: 120px
+      height: 120px
+      background: $white
+      color: $orange
+      padding: 16px 0 0 6px
+      margin-right: 24px
+      &-day
+        +norm
+        font-size: 72px
+      &-month
+        +bold 
+        font-size: 20px
+        line-height: 24px
+        transform: translateY(-16px)
+    &-content
+      padding-top: 9px
+      &-label
+        +norm
+        font-size: 12px
+        line-height: 18px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: rgba(37, 37, 37, 0.87)
+        margin-bottom: 8px
+      &-name
+        +bold 
+        font-size: 32px
+        line-height: 120%
+        color: $brown 
+        max-width: 80%
+  &__description
+    width: 100%
+    max-width: 1104px
+    margin: 40px 0 48px auto
+    &-header
+      position: relative
+      padding-left: 21px
+      +bold 
+      font-size: 18px
+      line-height: 24px
+      color: $black
+      margin-bottom: 48px
+      &:before 
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        width: 4px
+        height: 100%
+        background: $black
+    &-title
+      +bold 
+      font-size: 24px
+      line-height: 24px
+      color: $black
+      margin-bottom: 16px
+    &-text 
+      +norm 
+      font-size: 18px
+      line-height: 24px
+      color: $black   
+      margin-bottom: 32px
+    &-list 
+      list-style: none
+      counter-reset: myCounter
+      margin-bottom: 32px
+      &-item
+        position: relative
+        padding-left: 41px 
+        +norm 
+        font-size: 18px
+        line-height: 24px
+        color: $black   
+        margin-bottom: 16px       
+        &:before
+          position: absolute
+          top: 0
+          left: 0
+          counter-increment: myCounter
+          content: counter(myCounter)
+          +bold 
+          font-size: 13px
+          line-height: 13px          
+          border: 2px solid $grey4
+          color: $grey4
+          border-radius: 50%
+          width: 22px
+          height: 22px
+          display: flex
+          justify-content: center
+          align-items: center
+  &__other-photos
+    padding: 48px 0 48px 224px
+    background: $grey5
+    &-title
+      +bold 
+      font-size: 32px
+      line-height: 120%
+      color: $brown
+      margin-bottom: 32px
+    &-item 
+      display: flex
+      margin-bottom: 12px
+      padding: 6px 0
+      &-date
+        display: block
+        width: 112px
+        font-size: 12px
+        line-height: 18px
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: rgba(37, 37, 37, 0.87)
+      &-name
+        display: block
+        +bold 
+        font-size: 18px
+        line-height: 24px
+        color: $black
+        &_current
+          color: $grey2   
+
+@media screen and ( max-width: 1400px )
+  .photo-report
+    &__header
+      &-info    
+        height: 182px
+      &-menu
+        display: none
+    &__description
+      max-width: 880px
+      margin-left: 0 
+    &__other-photos
+      padding: 48px 32px     
+@media screen and ( max-width: 680px )
+  .photo-report
+    margin-top: 0
+    &__header
+      display: block
+      overflow: hidden
+      &-menu
+        display: flex
+      &-info  
+        padding: 8px
+      &-date
+        width: 64px
+        height: 64px
+        padding: 10px 0 0 7px
+        margin-right: 8px
+        &-day
+          +bold 
+          font-size: 24px
+          line-height: 24px
+        &-month 
+          display: none
+          &_mobile
+            display: block 
+            +bold
+            font-size: 20px
+            line-height: 24px
+            width: 57px
+      &-content
+        &-name
+          font-size: 22px
+          line-height: 120%
+          color: $brown 
+          max-width: none
+    &__other-photos
+      padding: 40px 16px 32px 
+      &-title
+        font-size: 22px
+        line-height: 140%
+        margin-bottom: 24px
+      &-item
+        display: block 
+        margin-bottom: 18px
+        &-date  
+          margin-bottom: 4px
+
+
+
+
+          
