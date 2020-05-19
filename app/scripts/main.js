@@ -312,6 +312,14 @@ $(document).ready(function() {
     list.toggleClass('scheme-header__menu-item-filter_active');
     icon.toggleClass('scheme-header__menu-item-icon_active');
   });
+
+  // Страница Вакансии
+  $('.vacancies__list-item-title').click(function() {
+    $(this).toggleClass('vacancies__list-item-title_active');
+    $(this).siblings('.vacancies__list-item-content').toggleClass('vacancies__list-item-content_active');
+    $(this).siblings('.vacancies__list-item-icon').toggleClass('vacancies__list-item-icon_active');
+    $(this).parent('.vacancies__list-item').toggleClass('vacancies__list-item_active');
+  });
   
 }); 
  
