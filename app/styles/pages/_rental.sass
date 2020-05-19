@@ -1,0 +1,206 @@
+.rental
+  margin: 32px 0 64px
+  &__header
+    display: flex
+    margin-bottom: 56px
+    &-cover
+      position: relative
+      width: 100%
+      max-width: 1104px
+      height: 400px
+      margin-left: auto
+      overflow: hidden
+      img
+        height: 100%
+    &-wrap
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(180deg, rgba(210, 210, 210, 0) 0%, rgba(0, 0, 0, 0.73) 100%)
+      padding: 24px 32px 39px
+      display: flex
+      flex-direction: column
+    &-label
+      +norm 
+      font-size: 12px
+      line-height: 18px
+      letter-spacing: 1px
+      color: $grey5
+      margin-bottom: 8px
+      text-transform: uppercase
+    &-title
+      +bold 
+      font-size: 48px
+      line-height: 112%
+      color: $white
+    &-numbers
+      display: flex
+      margin-top: auto
+      &-block
+        height: 86px
+        width: 220px
+        border-left: 4px solid $orange
+        padding: 7px 0 0 10px
+        &:nth-of-type(1)
+          margin-right: 15px
+        &:nth-of-type(2)
+          width: 250px
+          margin-right: 18px
+        &-count
+          +thin 
+          font-size: 56px
+          line-height: 56px
+          color: $white
+        &-text  
+          +bold 
+          font-size: 20px
+          line-height: 120%
+          color: $white 
+  &__content
+    display: flex
+    justify-content: space-between
+    width: 100%
+    max-width: 1104px
+    margin-left: auto
+    &-info 
+      width: 100%
+      max-width: 360px
+      &-contacts
+        padding: 20px 24px 0
+        background: $grey5
+        height: max-content
+        margin-bottom: 48px 
+        &-label
+          +norm 
+          font-size: 12px
+          line-height: 18px
+          letter-spacing: 1px
+          text-transform: uppercase
+          color: $grey9
+          margin-bottom: 12px
+        &-wrap
+          display: flex          
+        &-icons
+          display: flex
+          flex-direction: column
+          align-items: center 
+          margin-right: 16px
+          &-icon
+            margin-bottom: 14px
+          &-line
+            width: 4px
+            height: 46px
+            background: $orange  
+        &-info
+          padding-top: 2px
+          &-name
+            +bold 
+            font-size: 24px
+            line-height: 24px
+            color: $black
+            margin-bottom: 10px
+          &-phone, &-email
+            display: block
+            +norm 
+            font-size: 18px
+            line-height: 24px
+            color: $black
+      &-text
+        padding-left: 32px
+        +norm
+        font-size: 18px
+        line-height: 24px
+        color: $black
+        margin-bottom: 16px
+        &:last-of-type
+          margin-bottom: 0 
+    &-request
+      width: 100%
+      max-width: 656px
+      &-title
+        +bold
+        font-size: 32px
+        line-height: 120%
+        color: $black
+        margin-bottom: 30px
+      &-form
+        &-group
+          display: flex
+          margin-bottom: 24px
+          align-items: center
+          &-text            
+            +norm
+            font-size: 18px
+            line-height: 24px
+            color: $grey2
+            &:nth-of-type(1)
+              padding: 0 16px       
+            &:nth-of-type(3)
+              margin-right: 12px       
+        &-input
+          width: 100%
+          height: 56px
+          background: $grey5
+          margin-bottom: 24px
+          border-radius: 4px
+          &_medium
+            max-width: 320px
+            margin-bottom: 0
+            &:first-child
+              margin-right: 16px
+          &_small
+            max-width: 112px
+            margin-right: 16px
+            margin-bottom: 0
+            &:first-of-type
+              margin-left: auto
+          &_high
+            height: auto
+            min-height: 154px           
+
+
+@media screen and ( max-width: 1400px )
+  .rental
+    margin: 24px 0 48px
+    &__header
+      position: relative
+      display: block
+      &-menu
+        z-index: 1
+@media screen and ( max-width: 1023px )
+  .rental
+    &__header
+      &-cover
+        img
+          width: auto
+@media screen and ( max-width: 900px )
+  .rental
+    &__header
+      &-cover
+        height: 490px        
+      &-numbers
+        display: block
+        &-block
+          margin-bottom: 24px
+          &:last-of-type
+            margin-bottom: 0
+@media screen and ( max-width: 690px )
+  .rental
+    &__header
+      &-title
+        font-size: 32px
+        line-height: 120%
+@media screen and ( max-width: 680px )
+  .rental
+    margin-top: 0
+    &__header
+      &-wrap
+        padding: 16px 16px 32px       
+
+  
+            
+        
+          
+            
