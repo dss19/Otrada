@@ -58,7 +58,7 @@ function styles() {
 	return gulp
 		.src(options.styles.src)
 		.pipe(
-			plumber(function(err) {
+			plumber(function (err) {
 				console.log("Styles Task Error");
 				console.log(err);
 				this.emit("end");
@@ -67,12 +67,14 @@ function styles() {
 		.pipe(sass().on("error", sass.logError))
 		.pipe(
 			autoprefixer({
-				browsers: ["last 2 versions"],
+				overrideBrowserslist: ['last 2 versions'],
 				cascade: false,
 				grid: true
 			})
 		)
-		.pipe(cleanCSS({compatibility: 'ie8'}))
+		.pipe(cleanCSS({
+			compatibility: 'ie8'
+		}))
 		.pipe(gulp.dest(options.styles.dest))
 		.pipe(
 			browsersync.reload({
@@ -88,7 +90,7 @@ function scripts() {
 	return gulp
 		.src(options.scripts.src)
 		.pipe(
-			plumber(function(err) {
+			plumber(function (err) {
 				console.log("Scripts Task Error");
 				console.log(err);
 				this.emit("end");
@@ -110,7 +112,9 @@ function scripts() {
 function minify() {
 	return gulp
 		.src(options.html.src)
-    .pipe(htmlmin({ collapseWhitespace: true }))
+		.pipe(htmlmin({
+			collapseWhitespace: true
+		}))
 		.pipe(gulp.dest(options.html.dest))
 		.pipe(
 			browsersync.reload({

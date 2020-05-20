@@ -23,7 +23,7 @@
       display: flex
       flex-direction: column
     &-label
-      +norm 
+      +norm
       font-size: 12px
       line-height: 18px
       letter-spacing: 1px
@@ -31,7 +31,7 @@
       margin-bottom: 8px
       text-transform: uppercase
     &-title
-      +bold 
+      +bold
       font-size: 48px
       line-height: 112%
       color: $white
@@ -49,31 +49,31 @@
           width: 250px
           margin-right: 18px
         &-count
-          +thin 
+          +thin
           font-size: 56px
           line-height: 56px
           color: $white
-        &-text  
-          +bold 
+        &-text
+          +bold
           font-size: 20px
           line-height: 120%
-          color: $white 
+          color: $white
   &__content
     display: flex
     justify-content: space-between
     width: 100%
     max-width: 1104px
     margin-left: auto
-    &-info 
+    &-info
       width: 100%
       max-width: 360px
       &-contacts
         padding: 20px 24px 0
         background: $grey5
         height: max-content
-        margin-bottom: 48px 
+        margin-bottom: 48px
         &-label
-          +norm 
+          +norm
           font-size: 12px
           line-height: 18px
           letter-spacing: 1px
@@ -81,29 +81,29 @@
           color: $grey9
           margin-bottom: 12px
         &-wrap
-          display: flex          
+          display: flex
         &-icons
           display: flex
           flex-direction: column
-          align-items: center 
+          align-items: center
           margin-right: 16px
           &-icon
             margin-bottom: 14px
           &-line
             width: 4px
             height: 46px
-            background: $orange  
+            background: $orange
         &-info
           padding-top: 2px
           &-name
-            +bold 
+            +bold
             font-size: 24px
             line-height: 24px
             color: $black
             margin-bottom: 10px
           &-phone, &-email
             display: block
-            +norm 
+            +norm
             font-size: 18px
             line-height: 24px
             color: $black
@@ -115,51 +115,124 @@
         color: $black
         margin-bottom: 16px
         &:last-of-type
-          margin-bottom: 0 
-    &-request
-      width: 100%
-      max-width: 656px
+          margin-bottom: 0
+  &-request
+    width: 100%
+    max-width: 656px
+    &__form
       &-title
         +bold
         font-size: 32px
         line-height: 120%
         color: $black
         margin-bottom: 30px
-      &-form
-        &-group
+      &-group
+        display: flex
+        justify-content: space-between
+      &-text
+        padding-top: 16px
+        +norm
+        font-size: 18px
+        line-height: 24px
+        color: $grey2
+        &_value
+          padding-left: 16px
+        &_captcha
+          padding-left: 16px
+          max-width: 170px
+          padding-top: 0
+      &-input
+        position: relative
+        width: 100%
+        height: 56px
+        margin-bottom: 24px
+        &_norm
+          max-width: 320px
+        &_big
+          max-width: none
+        &_small
+          max-width: 148px
+        &_textfield
+          max-width: none
+          height: auto
+          min-height: 154px
+          .rental-request__form-input-field
+            padding-top: 0
+        &_captcha
+          max-width: 216px
+          .rental-request__form-input-field
+            padding-top: 0
+        &_check
           display: flex
-          margin-bottom: 24px
           align-items: center
-          &-text            
+          padding-left: 16px
+          max-width: none
+          cursor: pointer
+          .rental-request__form-input-field
+            width: 18px
+            height: 18px
+            margin-right: 16px
+        &-field
+          width: 100%
+          height: 100%
+          background: $grey5
+          border-radius: 4px
+          padding: 20px 0 0 16px
+          font-size: 18px
+          line-height: 24px
+          color: $brown
+        &-label
+          position: absolute
+          top: 16px
+          left: 16px
+          +norm
+          font-size: 18px
+          line-height: 24px
+          color: $grey2
+          transition: 0.3s
+          &_check
             +norm
             font-size: 18px
             line-height: 24px
             color: $grey2
-            &:nth-of-type(1)
-              padding: 0 16px       
-            &:nth-of-type(3)
-              margin-right: 12px       
-        &-input
+            cursor: pointer
+          &_focused
+            transform: translateY(-5px)
+            font-size: 12px
+            line-height: 12px
+      &-submit
+        display: flex
+        &-button
+          padding: 0
+          margin-right: 40px
           width: 100%
-          height: 56px
-          background: $grey5
-          margin-bottom: 24px
-          border-radius: 4px
-          &_medium
-            max-width: 320px
-            margin-bottom: 0
-            &:first-child
-              margin-right: 16px
-          &_small
-            max-width: 112px
-            margin-right: 16px
-            margin-bottom: 0
-            &:first-of-type
-              margin-left: auto
-          &_high
-            height: auto
-            min-height: 154px           
-
+          max-width: 248px
+          height: 65px
+          display: flex
+          justify-content: center
+          text-align: center
+          align-items: center
+          background: $white
+          color: $grey2
+          font-size: 16px
+          line-height: 24px
+          border: 2px solid $grey2
+        &-valid
+          &-title
+            +norm
+            font-size: 18px
+            line-height: 18px
+            color: $black
+            margin-bottom: 4px
+          &-item
+            +norm
+            font-size: 14px
+            line-height: 14px
+            color: $grey2
+      &-captcha
+        display: flex
+        justify-content: space-between
+        width: 168px
 
 @media screen and ( max-width: 1400px )
   .rental
@@ -169,17 +242,43 @@
       display: block
       &-menu
         z-index: 1
+@media screen and ( max-width: 1199px )
+  .rental__content-info
+    margin-right: 48px
+  .rental-request__form
+    &-input
+      &_norm
+        max-width: 288px
+      &_small
+        max-width: 126px
+    &-captcha
+      width: 140px
 @media screen and ( max-width: 1023px )
   .rental
     &__header
       &-cover
         img
           width: auto
+    &__content
+      display: block
+      &-info
+        max-width: none
+        margin: 0 0 46px
+    &-request
+      max-width: none
+      &__form
+        max-width: 656px
+        margin: 0 auto
+        &-input
+          &_norm
+            max-width: 320px
+          &_small
+            max-width: 148px
 @media screen and ( max-width: 900px )
   .rental
     &__header
       &-cover
-        height: 490px        
+        height: 490px
       &-numbers
         display: block
         &-block
@@ -197,10 +296,72 @@
     margin-top: 0
     &__header
       &-wrap
-        padding: 16px 16px 32px       
-
-  
-            
-        
-          
-            
+        padding: 16px 16px 32px
+    &__content
+      &-info
+        &-name
+          font-size: 22px
+          line-height: 120%
+        &-text
+          display: none
+    &-request
+      &__form
+        max-width: none
+        width: 100%
+        &-text
+          &_value
+            width: 100%
+            padding-left: 0
+            margin-bottom: 8px
+          &_captcha
+            padding-left: 0
+            max-width: none
+            width: 32%
+          &_numbers
+            padding-top: 0
+          &_refresh
+            font-size: 16px
+            padding-top: 8px
+        &-group
+          flex-wrap: wrap
+          &:nth-of-type(2)
+            height: 88px
+            margin-bottom: 24px
+            .rental-request__form-input
+              height: 88px
+        &-input
+          &_norm
+            max-width: none
+            width: 100%
+          &_small
+            max-width: none
+            width: 48%
+          &_captcha
+            max-width: none
+            width: 32%
+          &_check
+            position: relative
+            padding-left: 0
+            height: 90px
+            input
+              position: absolute
+              top: 35%
+              left: 0
+            label
+              position: absolute
+              top: 35%
+              left: 34px
+        &-captcha
+          flex-direction: column
+          align-items: center
+          justify-content: flex-start
+          width: 24%
+        &-submit
+          flex-direction: column-reverse
+          &-button
+            max-width: none
+            width: 100%
+            margin-right: 0
+          &-valid
+            width: 100%
+            margin-bottom: 16px
