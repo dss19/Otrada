@@ -327,5 +327,30 @@ $(document).ready(function () {
     input.val() === '' ? label.removeClass('rental-request__form-input-label_focused') : false;
   });
 
+  // Страница контакты
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+        center: [55.87625140815895, 37.332260888915926],
+        zoom: 13
+      }),
+      myPlacemark = new ymaps.Placemark([53.187312460901715, 45.04434658332824], null, {
+        iconLayout: 'default#image',
+        iconImageHref: './img/1.svg'
+      });
+    myMap.geoObjects.add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');
+  });
+
+  $('.contacts__form-input-field').focusin(function () {
+    let input = $(this),
+      label = input.siblings('.contacts__form-input-label');
+    label.addClass('contacts__form-input-label_focused');
+  });
+  $('.contacts__form-input-field').focusout(function () {
+    let input = $(this),
+      label = input.siblings('.contacts__form-input-label');
+    input.val() === '' ? label.removeClass('contacts__form-input-label_focused') : false;
+  });
+
 
 });
