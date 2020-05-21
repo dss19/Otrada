@@ -1,0 +1,348 @@
+.route
+  margin: 32px 0 64px 
+  &-content
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: 1fr
+    grid-gap: 16px
+  &-info  
+    &__header
+      position: relative
+      width: 100%
+      height: 228px
+      img 
+        width: 100%
+        height: 100%
+      &-wrap
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        padding: 16px 16px 16px 32px
+      &-title
+        +bold 
+        font-size: 48px
+        line-height: 112%
+        color: $white
+        margin-bottom: 10px
+      &-adress
+        display: flex
+        svg 
+          margin-right: 12px
+        &-text
+          +bold 
+          font-size: 16px
+          line-height: 24px
+          color: $white
+          max-width: 282px
+          margin-bottom: 28px
+      &-filter
+        display: flex
+        &-button 
+          +bold 
+          font-size: 18px
+          line-height: 27px
+          color: $brown
+          background: $white
+          padding: 10px 25px 
+          border-radius: 24px 
+          margin-right: 14px
+          cursor: pointer
+          &:last-of-type
+            margin-right: 0            
+          &_active
+            color: $white 
+            background: $orange 
+          span 
+            &:nth-of-type(1)
+              display: none
+    
+  &-free
+    margin-top: 43px
+    padding-left: 38px
+    &__desc
+      +norm
+      font-size: 18px
+      line-height: 24px
+      color: $black
+      margin-bottom: 34px
+      max-width: 478px
+    &__block
+      width: 432px
+      &-nav 
+        display: flex
+        justify-content: space-between
+        border-bottom: 2px solid $grey4
+        padding-bottom: 4px
+        margin-bottom: 8px
+        &-block
+          width: 110px
+          &-title
+            +norm
+            font-size: 18px
+            line-height: 24px
+            color: $black
+          &-icons
+            display: flex
+            justify-content: space-between
+            align-items: center 
+        &-buttons
+          display: flex
+          justify-content: space-between
+          align-items: center
+          width: 70px 
+          svg   
+            cursor: pointer  
+      &-panel
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-template-rows: auto
+        grid-gap: 16px 8px
+        &-item
+          position: relative
+          width: 100%
+          padding-bottom: 90%
+        &-cover
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background: $grey5
+          border-radius: 2px  
+          padding: 12px 10px
+          display: flex
+          flex-direction: column
+        &-time
+          +bold
+          font-size: 24px
+          line-height: 24px
+          color: $grey2
+          margin-bottom: 3px
+          &:last-of-type
+            margin-bottom: 0
+            margin-top: auto 
+  &-auto
+    margin-top: 24px
+    &__form
+      display: flex
+      justify-content: space-between
+      &-input
+        position: relative
+        height: 56px
+        width: 73.9%
+        &-field
+          width: 100%
+          height: 100%
+          padding: 20px 0 0 16px
+          color: $brown
+          background: $grey5
+          font-size: 18px
+          line-height: 24px
+          border-radius: 4px
+        &-label
+          position: absolute
+          top: 16px
+          left: 16px
+          +norm
+          font-size: 18px
+          line-height: 24px
+          color: $grey2
+          transition: 0.3s
+          cursor: text
+          &_focused
+            transform: translateY(-5px)
+            font-size: 12px
+            line-height: 12px
+      &-button
+        height: 56px
+        width: 25%
+        background: $orange
+        display: flex
+        justify-content: center
+        align-items: center
+        svg
+          &:nth-of-type(1) 
+            margin-right: 17px
+        span 
+          +bold 
+          text-transform: uppercase
+          font-size: 12px
+          line-height: 16px
+          letter-spacing: 1.4px  
+          color: $white
+  &-bus
+    margin-top: 8px
+    &__city
+      +bold
+      font-size: 32px
+      line-height: 120%
+      color: $black
+      margin: 35px 0 11px
+    &__button
+      +norm 
+      font-size: 18px
+      line-height: 24px
+      color: $black
+      margin-bottom: 13px
+      max-width: 479px
+      cursor: pointer
+      &_active
+        color: $orange
+      &-metro
+        position: relative
+        padding-left: 18px
+        +norm 
+        font-size: 18px
+        line-height: 24px
+        color: $black
+        margin-right: 14px
+        cursor: pointer
+        &::before
+          position: absolute
+          top: 7px
+          left: 0
+          content: ''
+          width: 12px
+          height: 12px
+          border-radius: 50%
+        &_blue
+          &::before          
+            background: #3645CA
+        &_lilac
+          &::before            
+            background: #870070  
+
+  &-maps
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(2, auto)
+    grid-gap: 16px
+    &__big
+      height: 474px
+      grid-column: span 2
+    &__small
+      position: relative
+      padding-bottom: 97.5%
+      &-cover
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%            
+      &_hidden
+        display: none 
+  //Отображение блоков по фильтру 
+  &-block
+    display: none
+    &_visible
+      display: block       
+
+@media screen and ( max-width: 1400px )
+  .route
+    margin: 24px 0 48px
+    &-info
+      &__header
+        &-filter
+          &-button
+            span 
+              &:nth-of-type(1)
+                display: inline
+              &:nth-of-type(2)
+                display: none
+@media screen and ( max-width: 1199px )
+  .route
+    &-info
+      &__header
+        &-filter
+          &-button
+            font-size: 14px
+@media screen and ( max-width: 992px )
+  .route
+    &-content
+      display: block
+    &-info
+      &__header
+        &-filter
+          &-button
+            font-size: 18px
+            span 
+              &:nth-of-type(2)
+                display: inline
+              &:nth-of-type(1)
+                display: none
+    &-block
+      margin-bottom: 39px            
+@media screen and ( max-width: 768px )
+  .route
+    &-info
+      &__header
+        &-wrap
+          overflow: hidden
+    &-free
+      padding-left: 31px
+      &__desc
+        max-width: none
+      &__block
+        width: 100%
+        &-panel
+          grid-template-columns: repeat(7, 1fr)    
+@media screen and ( max-width: 680px )
+  .route
+    margin-top: 16px
+    &-info
+      &__header
+        &-wrap  
+          padding: 16px
+        &-title
+          font-size: 32px
+          line-height: 120%
+    &-free
+      padding-left: 0
+      margin-top: 27px
+      &__desc
+        margin-bottom: 24px
+      &__block
+        &-panel
+          grid-template-columns: repeat(4, 1fr)
+          grid-gap: 8px 11px
+          &-item  
+            padding-bottom: 76.6%
+@media screen and ( max-width: 576px )
+  .route
+    &-info
+      &__header
+        overflow: hidden
+        img
+          width: auto
+    &-free
+      &__block
+        &-panel
+          grid-template-columns: repeat(3, 1fr)
+    &-auto
+      margin-bottom: 24px
+      &__form
+        display: block
+        &-input
+          width: 100%
+          margin-bottom: 8px
+        &-button
+          width: 100%
+          justify-content: flex-start
+          padding-left: 20px  
+    &-bus
+      &__city
+        font-size: 22px
+        line-height: 120%
+    &-maps
+      grid-template-columns: 1fr
+      &__big
+        grid-column: span 1
+        height: 400px 
+      
+
+
+                  
+                
+  

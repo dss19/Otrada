@@ -140,7 +140,7 @@ $(document).ready(function () {
     type: "GET",
     cache: true,
     success: function () {
-      $('.shops-list').load('ajax/shops-by-logo.html')
+      $('.shops-list').load('ajax/shops-by-logo.html');
     }
   });
 
@@ -329,16 +329,16 @@ $(document).ready(function () {
 
   // Страница контакты
   ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
+    var contactsMap = new ymaps.Map('map', {
         center: [55.87625140815895, 37.332260888915926],
         zoom: 13
       }),
-      myPlacemark = new ymaps.Placemark([53.187312460901715, 45.04434658332824], null, {
+      myPlacemark = new ymaps.Placemark([55.87625140815895, 37.332260888915926], null, {
         iconLayout: 'default#image',
-        iconImageHref: './img/1.svg'
+        iconImageHref: './images/DestinationPoint.svg'
       });
-    myMap.geoObjects.add(myPlacemark);
-    myMap.behaviors.disable('scrollZoom');
+    contactsMap.geoObjects.add(myPlacemark);
+    contactsMap.behaviors.disable('scrollZoom');
   });
 
   $('.contacts__form-input-field').focusin(function () {
@@ -350,6 +350,36 @@ $(document).ready(function () {
     let input = $(this),
       label = input.siblings('.contacts__form-input-label');
     input.val() === '' ? label.removeClass('contacts__form-input-label_focused') : false;
+  });
+
+
+  // Страница Как добраться
+  $('.route-auto__form-input-field').focusin(function () {
+    let input = $(this),
+      label = input.siblings('.route-auto__form-input-label');
+    label.addClass('route-auto__form-input-label_focused');
+  });
+  $('.route-auto__form-input-field').focusout(function () {
+    let input = $(this),
+      label = input.siblings('.route-auto__form-input-label');
+    input.val() === '' ? label.removeClass('route-auto__form-input-label_focused') : false;
+  });
+
+  $('.route-info__header-filter-button').click(function () {
+    $('.route-info__header-filter-button').removeClass('route-info__header-filter-button_active');
+    $(this).addClass('route-info__header-filter-button_active');
+    let attr = $(this).attr('data-block'),
+      target = `.${attr}`;
+    $('.route-block').removeClass('route-block_visible');
+    $(target).addClass('route-block_visible');
+  });
+
+  // Скролл наверх
+  $('.footer-top-btn').click(function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1000);
   });
 
 

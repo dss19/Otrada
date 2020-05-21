@@ -158,6 +158,7 @@ function watchFiles() {
 	gulp.watch(options.styles.src, styles);
 	gulp.watch(options.scripts.src, scripts);
 	gulp.watch(options.fonts.src, fonts);
+	gulp.watch(options.images.src, images);
 }
 
 /* Build
