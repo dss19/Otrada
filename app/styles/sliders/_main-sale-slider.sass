@@ -1,0 +1,85 @@
+.sale-slider
+  display: none
+  grid-row: span 1
+  grid-column: span 2
+  margin-bottom: 40px
+  &__wrap
+    position: relative
+  &__dots
+    position: absolute
+    left: 0
+    bottom: -25px
+    width: 100%
+    display: flex
+    justify-content: center
+    .swiper-pagination-bullet
+      margin: 0 4px
+      background: $grey3
+      opacity: 1
+      &-active
+        background: $orange    
+  &__slide
+    position: relative
+    width: 100%
+    padding-bottom: 69.5%
+    position: relative
+  &__content
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 24px 16px 21px
+    background: $grey5
+    &-total
+      background: $white
+      border: 8px solid $grey1
+      align-items: center
+  &__type
+    +norm
+    color: $brown
+    font-size: 12px
+    line-height: 18px
+    letter-spacing: 1px
+    margin-bottom: 8px
+    text-transform: uppercase
+  &__text
+    +bold
+    color: $brown
+    font-size: 22px
+    line-height: 120%
+  &__period
+    +bold
+    color: $orange
+    font-size: 18px
+    line-height: 27px
+    margin-top: auto
+  &__counter
+    +thin
+    color: $brown
+    font-size: 22.5vw
+    line-height: 100%
+  &__title
+    +bold
+    color: $black
+    font-size: 7vw
+    text-transform: uppercase
+
+@media screen and ( max-width: 576px )
+  .sale-slider
+    display: block
+    margin-top: 24px
+    &__counter
+      font-size: 18vw
+    &__title
+      font-size: 6vw
+    &__type
+      font-size: 4vw
+      margin-bottom: 5vw
+    &__text
+      font-size: 6vw
+    &__period
+      font-size: 4.5vw

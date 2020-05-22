@@ -1,0 +1,59 @@
+.brands-slider
+  grid-column: span 4
+  padding: 0 146px
+  // margin: 58px 0 80px
+  &__wrap
+    position: relative
+  &__dots
+    position: absolute
+    left: 0
+    bottom: -15px
+    width: 100%
+    display: flex
+    justify-content: center
+    .swiper-pagination-bullet
+      margin: 0 4px
+      background: $grey3
+      opacity: 1
+      &-active
+        background: $orange
+  &__prev
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: -110px
+    cursor: pointer
+    outline: none    
+  &__next
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: -110px
+    cursor: pointer
+    outline: none     
+  &-slide
+    img
+      width: auto
+@media screen and ( max-width: 1400px )  
+  .brands-slider
+    padding: 0 66px
+    margin-bottom: 30px
+    &__next
+      right: -60px
+    &__prev
+      left: -60px
+@media screen and ( max-width: 1023px )
+  .brands-slider
+    padding: 0 15px
+    &__prev, &__next
+      display: none              
+@media screen and ( max-width: 768px )
+  .brands-slider
+    grid-column: span 2
+    margin-top: 0
+    padding: 0
+    &-slide
+      img
+        width: inherit      
+
+  

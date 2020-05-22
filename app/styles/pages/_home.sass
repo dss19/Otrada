@@ -1,26 +1,17 @@
 .main
-  width: 100%  
-  margin: 16px 0 78px  
+  width: 100%
+  margin: 16px 0 78px
   display: grid
   grid-template-columns: repeat(4, 1fr)
   grid-template-rows: repeat(5, auto)
   grid-gap: 16px
-  
-  // Слайдеры афиши и кино
-  &-slider-top
-    width: 100%
-    height: 100%    
-    grid-column: span 2
-    grid-row: span 2
 
   // Цветные боксы
   &__box
-    // grid-column: span 1
-    // grid-row: span 1    
     width: 100%
     padding-bottom: 97.5%
     position: relative
-    &-content 
+    &-content
       position: absolute
       top: 0
       left: 0
@@ -83,320 +74,26 @@
       line-height: 24px
       letter-spacing: 2px
       text-transform: uppercase
-      margin-bottom: 16px                     
+      margin-bottom: 16px
     &-text
-      +bold 
+      +bold
       color: $brown
       font-size: 22px
-      line-height: 140%                                  
+      line-height: 140%
     &-period
-      +bold 
+      +bold
       font-size: 18px
       line-height: 27px
       color: $grey2
-      margin-top: auto    
-
-// Слайдер афиш
-.news-slider
-  &-slide
-    img
-      width: 100%  
-  &-prev
-    display: none
-  &-next 
-    position: absolute
-    bottom: 24px
-    left: 72px
-    width: 28px
-    height: 28px
-    cursor: pointer
-  .slick-dots
-    position: absolute
-    bottom: 32px
-    left: 32px    
-    list-style: none
-    display: flex         
-    li 
-      width: 8px
-      height: 8px
-      border: none
-      border-radius: 50%
-      margin-right: 8px
-      &:last-child
-        margin-right: 0
-      button
-        padding: 0 
-        width: 8px
-        height: 8px
-        border: none
-        outline: none
-        border-radius: 50%
-        color: transparent
-        background: $white
-        cursor: pointer
-    li.slick-active
-      button
-        background: $grey3
-
-// Слайдер кинотеатра
-.cinema-slider
-  position: relative
-  margin-top: 5px      
-  &__slide
-    &-content
-      width: 100%
-      height: 100%
-      background: url('../images/main/cinema-slider/kino-bg.jpg') no-repeat
-      background-size: cover
-      padding: 24px 32px    
-      display: grid
-      grid-template-columns: 48.7% 1fr
-      grid-column-gap: 38px    
-    &-info
-      padding-bottom: 50px
-      display: flex
-      flex-direction: column
-    &-header
-      +norm
-      font-size: 16px
-      letter-spacing: 2px
-      color: rgba($white, 0.87)
-      text-transform: uppercase
-    &-logo
-      width: 216px
-      transform: translateY(-16px)
-    &-movie
-      +bold 
-      font-size: 22px
-      line-height: 140%
-      color: rgba($white, 0.87)
-      width: 220px      
-      margin-top: auto 
-    &-all-movies
-      display: block
-      +bold 
-      font-size: 18px
-      line-height: 27px
-      color: $pink1
-      margin-top: 17px   
-    &-reserve
-      display: flex
-      align-items: center
-      +bold 
-      font-size: 18px
-      line-height: 27px
-      color: $pink1
-      margin-top: 4px
-      img 
-        width: 24px
-  &-prev
-    display: none
-  &-next 
-    position: absolute
-    bottom: 32px
-    left: 426px
-    width: 28px
-    height: 28px
-    cursor: pointer
-  .slick-dots
-    position: absolute
-    bottom: 42px
-    left: 358px    
-    list-style: none
-    display: flex         
-    li 
-      width: 8px
-      height: 8px
-      border: none
-      border-radius: 50%
-      margin-right: 8px
-      &:last-child
-        margin-right: 0
-      button
-        padding: 0 
-        width: 8px
-        height: 8px
-        border: none
-        outline: none
-        border-radius: 50%
-        color: transparent
-        background: rgba($white, 0.8)
-        cursor: pointer
-    li.slick-active
-      button
-        background: $pink1
-
-// Слайдер кино на мобилке
-.cinema-mobile-slider
-  display: none !important    
-// Слайдер скидок на мобилке
-.sale-slider.slick-slider
-  display: none  
-.sale-slider  
-  grid-row: span 1
-  grid-column: span 2
-  .slick-slide
-    margin-right: 8px
-  &__slide
-    position: relative
-    width: 100%
-    padding-bottom: 69.5%
-    position: relative      
-  &__content
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    display: flex
-    flex-direction: column      
-    justify-content: center
-    padding: 24px 16px 21px
-    background: $grey5      
-    &-total
-      background: $white
-      border: 8px solid $grey1
-      align-items: center
-  &__type
-    +norm 
-    color: $brown 
-    font-size: 12px
-    line-height: 18px
-    letter-spacing: 1px
-    margin-bottom: 8px
-    text-transform: uppercase
-  &__text
-    +bold 
-    color: $brown
-    font-size: 22px
-    line-height: 120%
-  &__period
-    +bold
-    color: $orange  
-    font-size: 18px
-    line-height: 27px
-    margin-top: auto
-  &__counter
-    +thin 
-    color: $brown
-    font-size: 22.5vw
-    line-height: 100%
-  &__title  
-    +bold 
-    color: $black
-    font-size: 7vw      
-    text-transform: uppercase
-  .slick-dots
-    width: 100%
-    list-style: none
-    display: flex
-    justify-content: center
-    margin-top: 18px
-    margin-bottom: 24px    
-    li 
-      width: 8px
-      height: 8px
-      border: none
-      border-radius: 50%
-      margin-right: 8px
-      &:last-child
-        margin-right: 0
-      button
-        padding: 0 
-        width: 8px
-        height: 8px
-        border: none
-        outline: none
-        border-radius: 50%
-        color: transparent
-        background: $grey3
-        cursor: pointer
-    li.slick-active
-      button
-        background: $orange  
-
-// Слайдер с брендами
-.brands-slider
-  grid-column: span 4    
-  padding: 0 146px
-  margin: 58px 0 80px
-  &-slide
-    img 
-      width: auto
-  &-prev
-    position: absolute
-    transform: translateY(-50%)
-    top: 50%
-    left: 24px
-    cursor: pointer
-  &-next 
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    right: 24px
-    cursor: pointer
-  .slick-dots    
-    width: 100%
-    list-style: none
-    display: flex
-    justify-content: center
-    margin-top: 18px    
-    li 
-      width: 8px
-      height: 8px
-      border: none
-      border-radius: 50%
-      margin-right: 8px
-      &:last-child
-        margin-right: 0
-      button
-        padding: 0 
-        width: 8px
-        height: 8px
-        border: none
-        outline: none
-        border-radius: 50%
-        color: transparent
-        background: $grey3
-        cursor: pointer
-    li.slick-active
-      button
-        background: $orange    
+      margin-top: auto
 
 @media screen and ( max-width: 1400px )
   .main
     margin: 16px 0 40px
-  .brands-slider
-    padding: 0 66px
-    margin: 30px 0
-    &-next
-      right: 0
-    &-prev
-      left: 0
-  .cinema-slider
-    &__slide
-      &-logo 
-        width: 200px      
-    &-next 
-      bottom: 36px
-      left: 372px
-    .slick-dots
-      bottom: 46px
-      left: 304px                   
 
 @media screen and ( max-width: 1199px )
   .main__box-sale-total-title
     font-size: 20px
-  .cinema-slider
-    &__slide   
-      &-logo 
-        width: 180px    
-    &-next 
-      bottom: 36px
-      left: 340px
-    .slick-dots
-      bottom: 46px
-      left: 270px  
 
 @media screen and ( max-width: 1023px )
   .main__box
@@ -407,41 +104,16 @@
     &-type
       font-size: 1.6vw
       margin-bottom: 10px
-    &-text 
+    &-text
       font-size: 2vw
-    &-period 
+    &-period
       font-size: 1.8vw
-  .cinema-slider
-    &__slide
-      &-content
-        padding: 4.9% 6.5%
-        grid-column-gap: 7.7%      
-      &-info
-        padding-bottom: 17.3%
-      &-header
-        font-size: 1.5vw          
-      &-logo        
-        width: 82%
-      &-movie
-        width: auto
-        font-size: 2vw        
-      &-all-movies, &-reserve
-        font-size: 1.5vw
-        line-height: 110%
-    .slick-dots
-      left: 55.8%
-      bottom: 11% 
-    &-next 
-      left: 70%
-      bottom: 8.4%     
-                   
+
 @media screen and ( max-width: 768px )
   .main
     grid-template-columns: repeat(2, 1fr)
-    grid-template-rows: repeat(6, auto)      
-    &-slider-top
-      grid-row: span 1
-    &__box  
+    grid-template-rows: repeat(6, auto)
+    &__box
       &-counter, &-sale-total-counter
         font-size: 9.4vw
       &-title, &-sale-total-title
@@ -449,194 +121,21 @@
       &-type
         font-size: 2.3vw
         margin-bottom: 12px
-      &-text 
+      &-text
         font-size: 3.8vw
-      &-period 
-        font-size: 2.8vw  
-  .cinema-slider
-    grid-row: 5
-    margin-top: 0
-    &__slide
-      &-content
-        padding: 3.2% 4.6%;
-        grid-column-gap: 6%
-        grid-template-columns: 48.7% 1fr
-      &-info
-        padding-bottom: 16.5%
-      &-header
-        font-size: 2vw   
-      &-logo        
-        width: 85%
-      &-movie
-        width: 85%
-        font-size: 3.5vw        
-      &-all-movies
-        font-size: 2.5vw
-        line-height: 110%
-        margin-top: 10%
-      &-reserve 
-        margin-top: 6px
-        font-size: 2.5vw
-        line-height: 110%
-    .slick-dots
-      left: 54.6%
-      bottom: 7% 
-    &-next 
-      left: 65.5%
-      bottom: 5.2%
-
-  .sale-hidden          
+      &-period
+        font-size: 2.8vw
+  .sale-hidden
     display: none
-  .brands-slider.slick-slider
-    grid-column: span 2 
-  .brands-slider
-    margin-bottom: 0
-    padding: 0
-    &-slide
-      img
-        width: inherit   
 
 @media screen and ( max-width: 576px )
-  .main    
+  .main
     margin-top: 8px
-    grid-gap: 8px    
+    grid-gap: 8px
     &__box-sale, &__box-sale-total
       display: none
-    &__box  
+    &__box
       &-counter, .sale-slider__counter
         font-size: 14vw
       &-title, &-sale-total-title
-        font-size: 5vw       
-  .news-slider
-    margin-bottom: 16px
-    .slick-dots
-      position: relative
-      width: 100%
-      justify-content: center
-      margin-top: 13px
-      left: 0
-      bottom: 0
-      li 
-        button 
-          background: $grey3
-      li.slick-active
-        button 
-          background: $orange
-  .cinema-slider
-    &__slide
-      display: none !important
-    .slick-dots
-      display: none !important 
-  .cinema-mobile-slider
-    display: block !important
-    grid-row: 6
-    grid-column: span 2
-    &__slide      
-      &-content
-        width: 100%
-        height: 100% 
-        padding: 7.5% 5%
-        background: url('../images/main/cinema-slider/kino-bg-mobile.jpg') no-repeat
-        background-size: cover
-        display: grid
-        grid-template-columns: 23.5% 1fr
-        grid-template-rows: repeat(3, auto)
-        grid-column-gap: 5%
-        grid-row-gap: 4%
-      &-header
-        grid-column: span 2
-        +norm
-        font-size: 4vw
-        letter-spacing: 2px
-        color: rgba($white, 0.87)
-        text-transform: uppercase
-        margin-bottom: 1vh
-      &-logo
-        grid-column: span 2
-        width: 59vw
-        margin: 0 auto 5.6vw          
-      &-movie
-        display: flex
-        align-items: center 
-        +bold 
-        font-size: 6vw
-        line-height: 140%
-        color: $white    
-      &-reserve
-        position: relative
-        grid-column: span 2
-        display: flex
-        align-items: center
-        +bold 
-        font-size: 5.7vw
-        color: $pink1
-        margin-top: 5vw
-        img
-          width: 7.5vw
-        span:after
-          position: absolute
-          bottom: 0
-          left: 0
-          content: ''
-          width: 53vw
-          height: 0.6vw
-          background: $pink1 
-
-      &-all-movies
-        position: relative
-        grid-column: span 2        
-        +bold 
-        font-size: 5.7vw
-        color: $pink1
-        &:after 
-          position: absolute
-          bottom: 0
-          left: 0
-          content: ''
-          width: 30vw
-          height: 0.6vw
-          background: $pink1
-    .slick-dots
-      width: 100%
-      display: flex
-      justify-content: center
-      margin-top: 18px
-      list-style: none      
-      li 
-        width: 8px
-        height: 8px
-        border: none
-        border-radius: 50%
-        margin-right: 8px
-        &:last-child
-          margin-right: 0
-        button
-          padding: 0 
-          width: 8px
-          height: 8px
-          border: none
-          outline: none
-          border-radius: 50%
-          color: transparent
-          background: $grey3
-          cursor: pointer
-      li.slick-active
-        button
-          background: $pink1
-    .slick-slide
-      margin-right: 8px         
-  .sale-slider.slick-slider    
-    display: block
-    margin-top: 24px
-  .sale-slider
-    &__counter
-      font-size: 18vw
-    &__title
-      font-size: 6vw  
-    &__type
-      font-size: 4vw
-      margin-bottom: 5vw
-    &__text 
-      font-size: 6vw
-    &__period 
-      font-size: 4.5vw
+        font-size: 5vw

@@ -1,0 +1,232 @@
+.cinema-slider
+  position: relative
+  margin-top: 5px
+  width: 100%
+  height: 100%
+  grid-column: span 2
+  grid-row: span 2
+  &__slide
+    &-content
+      width: 100%
+      height: 100%
+      background: url('../images/main/cinema-slider/kino-bg.jpg') no-repeat
+      background-size: cover
+      padding: 24px 32px
+      display: grid
+      grid-template-columns: 48.7% 1fr
+      grid-column-gap: 38px
+    &-info
+      padding-bottom: 50px
+      display: flex
+      flex-direction: column
+    &-header
+      +norm
+      font-size: 16px
+      letter-spacing: 2px
+      color: rgba($white, 0.87)
+      text-transform: uppercase
+    &-logo
+      width: 216px
+      transform: translateY(-16px)
+    &-movie
+      +bold
+      font-size: 22px
+      line-height: 140%
+      color: rgba($white, 0.87)
+      width: 220px
+      margin-top: auto
+    &-all-movies
+      display: block
+      +bold
+      font-size: 18px
+      line-height: 27px
+      color: $pink1
+      margin-top: 17px
+    &-reserve
+      display: flex
+      align-items: center
+      +bold
+      font-size: 18px
+      line-height: 27px
+      color: $pink1
+      margin-top: 4px
+      img
+        width: 24px
+  &__wrap
+    width: 100%
+    height: 100%
+    position: relative
+  &__nav
+    position: absolute
+    left: 355px
+    bottom: 40px
+    display: flex
+    align-items: center
+    z-index: 2    
+    .swiper-pagination-bullet
+      margin: 0 4px
+      background: rgba($white, 0.8)
+      opacity: 1
+      &-active
+        background: $pink1
+  &__dots
+    margin-right: 12px
+  &__next
+    cursor: pointer 
+// Слайдер кино на мобилке
+.cinema-mobile-slider
+  display: none
+@media screen and ( max-width: 1400px )
+  .cinema-slider
+    &__slide
+      &-logo
+        width: 200px
+    &__nav
+      left: 300px
+      bottom: 34px
+@media screen and ( max-width: 1199px )
+  .cinema-slider
+    &__slide
+      &-logo
+        width: 180px
+    &__nav
+      left: 273px 
+@media screen and ( max-width: 1023px )
+  .cinema-slider
+    &__nav
+      left: 55%
+      bottom: 7%
+    &__slide
+      &-content
+        padding: 4.9% 6.5%
+        grid-column-gap: 7.7%
+      &-info
+        padding-bottom: 17.3%
+      &-header
+        font-size: 1.5vw
+      &-logo
+        width: 82%
+      &-movie
+        width: auto
+        font-size: 2vw
+      &-all-movies, &-reserve
+        font-size: 1.5vw
+        line-height: 110% 
+@media screen and ( max-width: 768px )
+  .cinema-slider
+    grid-row: 6
+    margin-top: 0
+    &__nav
+      left: 54%
+      bottom: 6%
+    &__slide
+      &-content
+        padding: 3.2% 4.6%
+        grid-column-gap: 6%
+        grid-template-columns: 48.7% 1fr
+      &-info
+        padding-bottom: 16.5%
+      &-header
+        font-size: 2vw
+      &-logo
+        width: 85%
+      &-movie
+        width: 85%
+        font-size: 3.5vw
+      &-all-movies
+        font-size: 2.5vw
+        line-height: 110%
+        margin-top: 10%
+      &-reserve
+        margin-top: 6px
+        font-size: 2.5vw
+        line-height: 110%
+                                 
+@media screen and ( max-width: 576px )  
+  .cinema-slider
+    display: none
+  .cinema-mobile-slider
+    display: block
+    grid-row: 6
+    grid-column: span 2
+    margin-bottom: 24px
+    &__wrap
+      position: relative
+    &__dots
+      position: absolute
+      left: 0
+      bottom: -24px
+      z-index: 2
+      width: 100%
+      display: flex
+      justify-content: center
+      .swiper-pagination-bullet
+        margin: 0 4px
+        background: $grey3
+        opacity: 1
+        &-active
+          background: $pink1  
+    &__slide
+      &-content
+        width: 100%
+        height: 100%
+        padding: 7.5% 5%
+        background: url('../images/main/cinema-slider/kino-bg-mobile.jpg') no-repeat
+        background-size: cover
+        display: grid
+        grid-template-columns: 23.5% 1fr
+        grid-template-rows: repeat(3, auto)
+        grid-column-gap: 5%
+        grid-row-gap: 4%
+      &-header
+        grid-column: span 2
+        +norm
+        font-size: 4vw
+        letter-spacing: 2px
+        color: rgba($white, 0.87)
+        text-transform: uppercase
+        margin-bottom: 1vh
+      &-logo
+        grid-column: span 2
+        width: 59vw
+        margin: 0 auto 5.6vw
+      &-movie
+        display: flex
+        align-items: center
+        +bold
+        font-size: 6vw
+        line-height: 140%
+        color: $white
+      &-reserve
+        position: relative
+        grid-column: span 2
+        display: flex
+        align-items: center
+        +bold
+        font-size: 5.7vw
+        color: $pink1
+        margin-top: 5vw
+        img
+          width: 7.5vw
+        span:after
+          position: absolute
+          bottom: 0
+          left: 0
+          content: ''
+          width: 53vw
+          height: 0.6vw
+          background: $pink1
+      &-all-movies
+        position: relative
+        grid-column: span 2
+        +bold
+        font-size: 5.7vw
+        color: $pink1
+        &:after
+          position: absolute
+          bottom: 0
+          left: 0
+          content: ''
+          width: 30vw
+          height: 0.6vw
+          background: $pink1
