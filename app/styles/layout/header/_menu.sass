@@ -10,13 +10,13 @@
     margin-left: 63px
     opacity: 0
     display: none
-    visibility: hidden    
+    visibility: hidden
     // animation: 0.4s searchFadeOut forwards       
-    &_active      
-      display: flex      
+    &_active
+      display: flex
       visibility: visible
       animation: 0.4s searchFadeIn forwards
-    form 
+    form
       position: relative
       display: flex
       width: 100%
@@ -30,7 +30,7 @@
     font-size: 14px
     line-height: 21px
     letter-spacing: 0.8px
-    padding-left: 27px
+    padding: 0 0 0 27px
     &::placeholder
       +norm
       color: $white
@@ -49,7 +49,7 @@
     line-height: 24px
     letter-spacing: 0.8px
     color: rgba(218, 200, 200, 0.873613)
-    padding-right: 11px    
+    padding-right: 11px
   &__search-panel-close
     position: absolute
     top: 0
@@ -59,35 +59,35 @@
     background: $white
     display: flex
     align-items: center
-    justify-content: center    
+    justify-content: center
     cursor: pointer
-    svg 
+    svg
       path
-        transition: 0.3s 
-        fill: $grey4  
+      transition: 0.3s
+      fill: $grey4
   &__search-button
     margin-right: 3px
-    cursor: pointer    
+    cursor: pointer
     width: 60px
     height: 56px
     padding: 0 21px
     display: flex
     justify-content: center
     align-items: center
-    background-color: $orange    
+    background-color: $orange
     &_active
-      animation: 0.4s searchBtn forwards            
-    img 
+      animation: 0.4s searchBtn forwards
+    img
       width: 18px
       height: 18px
-  &__park-plan 
+  &__park-plan
     display: flex
     align-items: center
     background-color: $orange
     padding: 0 0 0 33px
     margin-right: 3px
     cursor: pointer
-    svg       
+    svg
       margin-right: 17.5px
     span
       color: $white
@@ -108,24 +108,24 @@
     width: 100%
     display: flex
     justify-content: space-between
-    padding: 0 29px 0 61px    
+    padding: 0 29px 0 61px
   &__item
     height: 100%
     display: flex
     align-items: center
-    cursor: pointer  
+    cursor: pointer
   &__item-img
     margin-right: 10px
     width: 18px
     height: 18px
     path
-      transition: 0.3s 
-      fill: $grey5
-      
+    transition: 0.3s
+    fill: $grey5
+
   &__item-svg
     margin-left: 5px
     path 
-      fill: $grey5  
+    fill: $grey5
   &__item-text
     color: $white
     +bold
@@ -133,15 +133,15 @@
     font-size: 14px
     line-height: 21px
     letter-spacing: 0.8px
-@keyframes searchFadeIn 
-  from 
+@keyframes searchFadeIn
+  from
     opacity: 0
-  to 
+  to
     opacity: 1
 @keyframes searchBtn
   to
     background: $brown
-        
+
 // @keyframes searchFadeOut 
 //   from 
 //     opacity: 1
@@ -149,19 +149,19 @@
 //     opacity: 0
 //     display: none
 //     visibility: hidden
-        
-@media screen and ( max-width: 1400px )  
+
+@media screen and ( max-width: 1400px )
   .menu
     &__list
-      padding: 0 24px 0 32px 
+      padding: 0 24px 0 32px
     &__park-plan
-      padding: 0 8px 0 27px  
+      padding: 0 8px 0 27px
 @media screen and ( max-width: 1199px )
   .menu
     &__list
       padding: 0 16px
     &__item-img
-      margin-right: 7px  
+      margin-right: 7px
     &__item-text
       font-size: 12px
 @media screen and ( max-width: 992px )
@@ -172,7 +172,7 @@
       padding: 0 30px
       &-img
         margin-right: 0
-      &-text, &-svg 
+      &-text, &-svg
         display: none
 @media screen and ( max-width: 768px )
   .menu
@@ -181,21 +181,21 @@
 @media screen and ( max-width: 576px )
   .menu
     flex-wrap: wrap
-    &__search-button      
-      margin-right: 8px      
+    &__search-button
+      margin-right: 8px
       width: 56px
       padding: 0 19px
     &__search-panel
-      width: calc(100% - 123px)
+      width: calc(100% - 127px)
       &-close
-        width: 60px  
+        width: 60px
     &__search-input
       padding-left: 12px
       &::placeholder
         font-size: 12px
-        line-height: 17px  
+        line-height: 17px
     &__search-reset
-      display: none  
+      display: none
     &__park-plan
       width: calc(100% - 128px)
       justify-content: center
@@ -205,4 +205,4 @@
       margin-top: 8px
       height: 56px
     &__list
-      padding: 0 8px                             
+      padding: 0 8px

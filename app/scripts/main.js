@@ -149,15 +149,15 @@ $(document).ready(function () {
     inner = text.prop("scrollHeight"),
     outer = text.prop("clientHeight"),
     diff = inner - outer;
-  diff > 5
-    ? spoiler.addClass("brand__info-description-spoiler_visible")
-    : spoiler.removeClass("brand__info-description-spoiler_visible");
+  diff > 5 ?
+    spoiler.addClass("brand__info-description-spoiler_visible") :
+    spoiler.removeClass("brand__info-description-spoiler_visible");
 
   spoiler.click(function () {
     text.toggleClass("brand__info-description-text_full");
-    text.hasClass("brand__info-description-text_full")
-      ? spoiler.html("Свернуть...")
-      : spoiler.html("Читать полностью...");
+    text.hasClass("brand__info-description-text_full") ?
+      spoiler.html("Свернуть...") :
+      spoiler.html("Читать полностью...");
   });
 
   const cinemaSlider = new Swiper(".swiper-container-cinema", {
@@ -275,9 +275,9 @@ $(document).ready(function () {
     aboutText = $(".about__info-desc-text-bottom");
   aboutSpoiler.click(function () {
     aboutText.toggleClass("about__info-desc-text-bottom_active");
-    aboutText.hasClass("about__info-desc-text-bottom_active")
-      ? aboutSpoiler.html("Свернуть...")
-      : aboutSpoiler.html("Читать полностью...");
+    aboutText.hasClass("about__info-desc-text-bottom_active") ?
+      aboutSpoiler.html("Свернуть...") :
+      aboutSpoiler.html("Читать полностью...");
   });
 
   // Страница схемы парка
@@ -316,9 +316,9 @@ $(document).ready(function () {
   $(".rental-request__form-input-field").focusout(function () {
     let input = $(this),
       label = input.siblings(".rental-request__form-input-label");
-    input.val() === ""
-      ? label.removeClass("rental-request__form-input-label_focused")
-      : false;
+    input.val() === "" ?
+      label.removeClass("rental-request__form-input-label_focused") :
+      false;
   });
 
   // Страница контакты
@@ -329,8 +329,7 @@ $(document).ready(function () {
       }),
       myPlacemark = new ymaps.Placemark(
         [55.87625140815895, 37.332260888915926],
-        null,
-        {
+        null, {
           iconLayout: "default#image",
           iconImageHref: "./images/DestinationPoint.svg",
         }
@@ -347,9 +346,9 @@ $(document).ready(function () {
   $(".contacts__form-input-field").focusout(function () {
     let input = $(this),
       label = input.siblings(".contacts__form-input-label");
-    input.val() === ""
-      ? label.removeClass("contacts__form-input-label_focused")
-      : false;
+    input.val() === "" ?
+      label.removeClass("contacts__form-input-label_focused") :
+      false;
   });
 
   // Страница Как добраться
@@ -361,9 +360,9 @@ $(document).ready(function () {
   $(".route-auto__form-input-field").focusout(function () {
     let input = $(this),
       label = input.siblings(".route-auto__form-input-label");
-    input.val() === ""
-      ? label.removeClass("route-auto__form-input-label_focused")
-      : false;
+    input.val() === "" ?
+      label.removeClass("route-auto__form-input-label_focused") :
+      false;
   });
 
   $(".route-info__header-filter-button").click(function () {
@@ -378,10 +377,8 @@ $(document).ready(function () {
   });
 
   // Скролл наверх
-  $(".footer-top-btn").click(function (e) {
-    e.preventDefault();
-    $("html, body").animate(
-      {
+  $(".footer-top-btn").click(function () {
+    $("html, body").animate({
         scrollTop: 0,
       },
       1000

@@ -10,14 +10,14 @@
   &__adress
     width: 310px
     margin-top: 40px
-    +bold 
+    +bold
     color: $brown
     font-size: 16px
     line-height: 24px
     letter-spacing: 0.8px
   &__direction-link
     margin-top: 7px
-    +bold 
+    +bold
     color: $orange
     font-size: 16px
     line-height: 24px
@@ -28,12 +28,12 @@
   &__links
     margin-right: 77px
     list-style: none
-    li 
+    li
       margin-bottom: 15px
       &:nth-child(4)
-        margin-bottom: 30px        
-  &__link 
-    +bold 
+        margin-bottom: 30px
+  &__link
+    +bold
     color: $brown
     font-size: 14px
     line-height: 21px
@@ -52,18 +52,18 @@
       color: rgba(37, 37, 37, 0.873613)
       margin-bottom: 16px
     &-phone
-      +bold 
-      color: $brown 
+      +bold
+      color: $brown
       font-size: 24px
       line-height: 24px
       margin-bottom: 11px
     &-email
-      +bold 
-      color: $brown 
+      +bold
+      color: $brown
       font-size: 24px
       line-height: 24px
       margin-bottom: 34px
-    &-btn 
+    &-btn
       +norm
       color: $brown
       font-size: 16px
@@ -73,18 +73,19 @@
       border: 2px solid $grey
       transition: 0.3s
   &-top-btn
-    display: flex    
+    display: flex
     align-items: center
-    justify-content: center 
+    justify-content: center
     width: 42px
     height: 176px
     background-color: $brown
     border: 2px solid $brown
     padding: 17px 0
     transition: 0.3s
-    svg 
+    cursor: pointer
+    svg
       path 
-        fill: $white   
+      fill: $white
   &__copyrights
     margin-top: 28px
     display: flex
@@ -92,7 +93,7 @@
     &-info
       display: flex
     &-text, &-link
-      +norm 
+      +norm
       color: #C2BCBC
       font-size: 16px
       line-height: 24px
@@ -100,14 +101,14 @@
     &-text
       margin-right: 41px
   &__webmaster
-    +norm 
+    +norm
     color: #C2BCBC
     font-size: 16px
     line-height: 24px
     letter-spacing: 0.8px
 
 @media screen and ( max-width: 1100px )
-  .footer__links 
+  .footer__links
     display: none
 @media screen and ( max-width: 768px )
   .footer__wrapper
@@ -121,17 +122,17 @@
     right: 0
   .footer__copyrights
     flex-direction: column
-    &-info  
+    &-info
       flex-direction: column
       margin-bottom: 16px
-@media screen and ( max-width: 576px )  
+@media screen and ( max-width: 576px )
   .footer
     &__wrapper
       padding: 32px 0 0
     &__adress
-      width: 232px 
+      width: 232px
       margin-top: 24px
     &__contacts-title
       font-size: 12px
     &-top-btn
-      top: 39px  
+      top: 39px
