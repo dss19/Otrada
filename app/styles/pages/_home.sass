@@ -54,8 +54,12 @@
         display: flex
         flex-direction: column
       &-total
-        background: $white
-        border: 8px solid $grey1
+        background: $grey1
+        .main__box-content
+          width: calc( 100% - 16px )
+          height: calc( 100% - 16px )
+          background: $white
+          margin: 8px
         &-counter
           +thin
           font-size: 72px

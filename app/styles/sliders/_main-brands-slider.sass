@@ -20,18 +20,24 @@
         background: $orange
   &__prev
     position: absolute
-    top: 50%
-    transform: translateY(-50%)
+    top: 64px
     left: -110px
     cursor: pointer
-    outline: none    
+    outline: none
+    transition: 0.3s
+    svg 
+      path, circle 
+        transition: 0.3s    
   &__next
     position: absolute
-    top: 50%
-    transform: translateY(-50%)
+    top: 64px
     right: -110px
     cursor: pointer
-    outline: none     
+    outline: none
+    transition: 0.3s
+    svg 
+      path, circle 
+        transition: 0.3s     
   &-slide
     img
       width: auto

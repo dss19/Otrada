@@ -19,12 +19,20 @@
         color: $orange
       .header__about-list
         opacity: 1
-        display: block  
+        display: block
+    &__about-list-link:hover
+      color: $orange      
   .menu
     &__item:hover
       .menu__item-img
         path
-          fill: $orange          
+          fill: $orange
+      .menu__item-text
+        color: $white 
+        &_last
+          color: $orange
+    &__item-hovered-link:hover
+      color: $orange                    
     &__search-panel-close:hover
       svg 
         path 
@@ -39,6 +47,11 @@
       svg
         path
           fill: $brown
+    &__direction-link:hover
+      &::after
+        opacity: 0
+    &__link:hover
+      color: $orange          
   // Магазины 
   .shops-by-logo__item:hover
     box-shadow: 0px 9px 46px rgba(39, 49, 141, 0.12), 0px 24px 38px rgba(9, 18, 48, 0.14)
@@ -54,7 +67,22 @@
     .swiper-slide
       &:hover 
         opacity: 1 
+  .about__header-menu-link:hover
+    color: $orange      
 
+  // Слайдер брендов на главной
+  .brands-slider__prev:hover    
+    svg 
+      path 
+        fill: $orange   
+      circle
+        stroke: $orange
+  .brands-slider__next:hover
+    svg 
+      path 
+        fill: $orange   
+      circle
+        stroke: $orange
   // Страница Вакансий
   .vacancies__list-item:hover
     box-shadow: 0px 0px 30px rgba(39, 49, 141, 0.06), 0px 8px 12px rgba(16, 25, 57, 0.04), 0px 1px 2px rgba(16, 25, 57, 0.04) 
