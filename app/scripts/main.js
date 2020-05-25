@@ -280,6 +280,12 @@ $(document).ready(function () {
       aboutSpoiler.html("Читать полностью...");
   });
 
+  // Страница Фотоотчетов
+  $('.all-photos__header-filter-button').click(function() {
+    $('.all-photos__header-filter-button').removeClass('all-photos__header-filter-button_active');
+    $(this).addClass('all-photos__header-filter-button_active');
+  });
+
   // Страница схемы парка
   $(".scheme-header__title").click(function () {
     $(this).toggleClass("scheme-header__title_active");
@@ -383,5 +389,35 @@ $(document).ready(function () {
       },
       1000
     );
+  });
+
+  // Выпадайка по наведению в шапке
+  const hoverMenu = function() {
+    if ($(window).width() >= '993') {
+      $('.menu__item_last').mouseenter(function () {
+        $(this).addClass('menu__item_active');
+        $('.menu__item-hovered').addClass('menu__item-hovered_active');
+      });
+      $('.menu__item-hovered').mouseleave(function () {
+        $(this).removeClass('menu__item-hovered_active');
+        $('.menu__item_last').removeClass('menu__item_active');
+      });      
+    } else {
+      console.log('меньше');      
+    }
+  }
+  hoverMenu();
+  $(window).resize(hoverMenu);
+
+  // Страница События
+  $('.event__header-filter-button').click(function() {
+    $('.event__header-filter-button').removeClass('event__header-filter-button_active');
+    $(this).addClass('event__header-filter-button_active');
+  });
+
+  // Страница скидки и акции
+  $('.sales__header-filter-button').click(function () {
+    $('.sales__header-filter-button').removeClass('sales__header-filter-button_active');
+    $(this).addClass('sales__header-filter-button_active');
   });
 });

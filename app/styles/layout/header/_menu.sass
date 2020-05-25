@@ -101,7 +101,7 @@
     display: flex
     align-items: center
     width: 100%
-    max-width: 1103px
+    max-width: 1103px    
   &__list
     height: 100%
     list-style: none
@@ -114,25 +114,69 @@
     display: flex
     align-items: center
     cursor: pointer
-  &__item-img
-    margin-right: 10px
-    width: 18px
-    height: 18px
-    path
-    transition: 0.3s
-    fill: $grey5
-
-  &__item-svg
-    margin-left: 5px
-    path 
-    fill: $grey5
-  &__item-text
-    color: $white
-    +bold
-    text-transform: uppercase
-    font-size: 14px
-    line-height: 21px
-    letter-spacing: 0.8px
+    &_last
+      position: relative
+    &_active
+      .menu__item-text_last
+        color: $orange
+        z-index: 1
+      .menu__item-svg_last
+        z-index: 1
+        transform: rotate(180deg)
+        path 
+          fill: $orange
+      .menu__item-img_last
+        path
+          fill: transparent        
+    &-hovered 
+      display: none
+      opacity: 0     
+      position: absolute
+      top: 2px
+      right: 7px
+      width: 220px
+      border: 2px solid #6A6A6A
+      z-index: 1
+      transition: 0.3s
+      &_active
+        display: block
+        opacity: 1
+      &-transparent
+        width: 100%
+        height: 56px
+        background: transparent
+      &-list
+        padding: 5px 10px 12px 38px
+        background: $white
+      &-link
+        display: block
+        +bold 
+        font-size: 14px
+        line-height: 21px
+        letter-spacing: 0.8px
+        text-transform: uppercase
+        color: $brown 
+        padding: 8px 0  
+    &-img
+      margin-right: 10px
+      width: 18px
+      height: 18px
+      path
+        transition: 0.3s
+        fill: $grey5
+    &-svg
+      transition: 0.3s
+      margin-left: 5px
+      path 
+        transition: 0.3s
+        fill: $grey5
+    &-text
+      color: $white
+      +bold
+      text-transform: uppercase
+      font-size: 14px
+      line-height: 21px
+      letter-spacing: 0.8px
 @keyframes searchFadeIn
   from
     opacity: 0
@@ -164,16 +208,28 @@
       margin-right: 7px
     &__item-text
       font-size: 12px
+    &__item-hovered
+      width: 184px
+      &-link
+        font-size: 12px  
 @media screen and ( max-width: 992px )
   .menu
     &__park-plan
       padding: 0 15px 0 27px
     &__item
       padding: 0 30px
+      &_active 
+        .menu__item-img_last
+          path  
+            fill: $grey5
       &-img
         margin-right: 0
       &-text, &-svg
         display: none
+      &-hovered
+        &_active
+          display: none
+          opacity: 0  
 @media screen and ( max-width: 768px )
   .menu
     &__item
