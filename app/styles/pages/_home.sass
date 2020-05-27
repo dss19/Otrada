@@ -53,8 +53,19 @@
         padding: 24px
         display: flex
         flex-direction: column
+        z-index: 1
+      &-icon
+        position: absolute
+        right: 0
+        bottom: 0
+        width: 40.6%
+        height: 60.2%
+        svg
+          width: 100%
+          height: 100%
       &-total
         background: $grey1
+        transition: 0.3s
         .main__box-content
           width: calc( 100% - 16px )
           height: calc( 100% - 16px )
@@ -84,6 +95,7 @@
       color: $brown
       font-size: 22px
       line-height: 140%
+      transition: 0.3s
     &-period
       +bold
       font-size: 18px
@@ -94,11 +106,13 @@
 @media screen and ( max-width: 1400px )
   .main
     margin: 16px 0 40px
+    &__box-sale-icon
 
 @media screen and ( max-width: 1199px )
-  .main__box-sale-total-title
-    font-size: 20px
-
+  .main
+    &__box-sale
+      &-total-title
+        font-size: 20px  
 @media screen and ( max-width: 1023px )
   .main__box
     &-counter, &-sale-total-counter

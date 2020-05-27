@@ -37,6 +37,10 @@
       svg 
         path 
           fill: $brown
+    &__search-button:hover 
+      background: $orange2      
+    &__park-plan:hover 
+      background: $orange2      
   .footer
     &__contacts-btn:hover
       color: $white
@@ -51,16 +55,59 @@
       &::after
         opacity: 0
     &__link:hover
-      color: $orange          
+      color: $orange 
+    &__contacts-phone:hover
+      color: $orange 
+    &__contacts-email:hover
+      color: $orange 
+    &__copyrights-link:hover
+      color: $grey2
+    &__webmaster:hover
+      color: $grey2
+  .main__box-sale:hover
+    .main__box-text
+      color: $orange    
+  .main__box-sale-total:hover
+    background: $brown
+  
   // Магазины 
+  .shops-panel__search:focus-within
+    svg 
+      path
+        fill: $orange
+  .shops-panel__filter-wrap:hover
+    .shops-panel__filter-wrap-cover
+      transform: scale(1) 
+      opacity: 1
+  .shops-panel__filter-wrap-scheme:hover
+    svg 
+      path 
+        fill: $orange           
   .shops-by-logo__item:hover
     box-shadow: 0px 9px 46px rgba(39, 49, 141, 0.12), 0px 24px 38px rgba(9, 18, 48, 0.14)
-
+  .shops-by-abc__link:hover
+    text-decoration: none
+    color: $orange   
+  .shops-type__filter-item:hover
+    .shops-type__filter-name
+      color: $orange
+  
   // Акции и события 
   .sales__list-item:hover
     .sales__list-item-content-hover
       visibility: visible
-      opacity: 1 
+      opacity: 1
+    .sales__list-item-content-visible-icon
+      opacity: 0
+  .sales__header-filter-button:hover
+    color: $orange       
+  .sales__header-filter-button_active:hover
+    color: $white
+  .sales__header-filter-link:hover
+    color: $orange
+    svg 
+      path 
+        fill: $orange         
 
   //Слайдер в О торговом парке и фотоотчетах
   .section-slider-thumbs
@@ -69,6 +116,27 @@
         opacity: 1 
   .about__header-menu-link:hover
     color: $orange      
+
+  // Страница О торговом парке
+  .about__info-contacts-block
+    &-social-link:hover
+      color: $orange  
+    &-route:hover
+      &::after
+        opacity: 0
+
+  // Страница фотоотчетов
+  .all-photos
+    &__header-filter-button:hover
+      color: $orange
+    &__header-filter-button_active:hover
+      color: $white
+    &__list-item:hover
+      .all-photos__list-item-name
+        color: $orange  
+    &__list-item_first:hover
+      .all-photos__list-item-name
+        color: $white
 
   // Слайдер брендов на главной
   .brands-slider__prev:hover    
@@ -85,10 +153,35 @@
         stroke: $orange
   // Страница Вакансий
   .vacancies__list-item:hover
-    box-shadow: 0px 0px 30px rgba(39, 49, 141, 0.06), 0px 8px 12px rgba(16, 25, 57, 0.04), 0px 1px 2px rgba(16, 25, 57, 0.04) 
+    box-shadow: 0px 0px 30px rgba(39, 49, 141, 0.06), 0px 8px 12px rgba(16, 25, 57, 0.04), 0px 1px 2px rgba(16, 25, 57, 0.04)
+    border-bottom: none
+    border-radius: 4px    
+    .vacancies__list-item-title
+      color: $orange    
     .vacancies__list-item-icon
       path 
         fill: $orange
+  .vacancies__list-item-shop-link:hover
+    color: $orange
+  // Страница схемы Парка
+  .scheme-header__menu-item:hover
+    .scheme-header__menu-item-title
+      color: $orange
+    .scheme-header__menu-item-icon
+      path  
+        fill: $orange
+
+  // Страница бренда
+  .brand
+    &__info
+      &-web, &-phone, &-social-link
+        &:hover
+          color: $orange                   
+
+  // Страница собитий
+  .event__info-item-text
+    a:hover
+      text-decoration: underline  
 
   // Иконка схемы парка
   .brand__header-scheme:hover
@@ -100,4 +193,25 @@
       path
         fill: $orange           
         
-  
+  // Страница Контактов
+  .contacts
+    &__header-info-phones-block
+      a:hover
+        color: $orange
+    &__header-info-email:hover
+      a 
+        color: $orange
+    &__header-info-social
+      a:hover 
+        color: $orange
+    &__header-info-route-link:hover
+      &:after 
+        opacity: 0
+
+  // Страница Как добраться
+  .route
+    &-info
+      &__header-filter-button:hover
+        color: $orange
+      &__header-filter-button_active:hover
+        color: $white
